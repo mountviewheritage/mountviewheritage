@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events - Mountview</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/blogs.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div id="navbar"></div>
+  <script src="js/menu.js"></script>
+  <script src="js/include-navbar.js"></script>
+
+
+  <!-- BLOG SECTION -->
+  <section class="blogs-section">
+    <h1 class="blogs-title">Blogs and Articles</h1>
+    <div class="blogs-search">
+      <input id="searchInput" type="text" placeholder="Search for a particular article" />
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <p class="blogs-subtitle">Latest release</p>
+
+    <div class="featured-blog">
+      <img src="images/blog-hero.png" alt="Best way to spend a day at Panchgani" class="blog-hero-img" />
+      <h3 class="blog-heading">Best way to spend a day at panchgani</h3>
+
+      <div class="blog-bottom">
+        <div class="blog-tags">
+          <span class="tag">Panchgani</span>
+          <span class="tag">Tourist spots</span>
+        </div>
+        <span class="blog-date">15 Jan 2026</span>
+      </div>
+    </div>
+  </section>
+  <section class="blogs-list-section">
+    <div class="blogs-grid" id="blogsGrid">
+
+      <!-- CARD 1 -->
+      <div class="blog-card">
+        <img src="images/ex15.png" alt="" />
+        <h3>Hidden Waterfalls: Panchgani's Secret Cascades</h3>
+        <div class="blog-card-footer">
+          <div class="blog-tags">
+            <span>Hidden Gems</span> <span>Nature</span>
+          </div>
+          <span class="blog-date">20 Jan 2026</span>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="blog-card">
+        <img src="images/ex16.png" alt="" />
+        <h3>Parsi Heritage: The Soul of Panchgani</h3>
+        <div class="blog-card-footer">
+          <div class="blog-tags">
+            <span>Culture</span> <span>Heritage</span>
+          </div>
+          <span class="blog-date">19 Jan 2026</span>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="blog-card">
+        <img src="images/ex17.png" alt="" />
+        <h3>Mapro Garden Chronicles: Beyond Strawberries</h3>
+        <div class="blog-card-footer">
+          <div class="blog-tags">
+            <span>Gardens</span> <span>Local Spots</span>
+          </div>
+          <span class="blog-date">18 Jan 2026</span>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="blog-card">
+        <img src="images/ex18.png" alt="" />
+        <h3>Paragliding Over the Valley: Soaring Through Clouds</h3>
+        <div class="blog-card-footer">
+          <div class="blog-tags">
+            <span>Adventure</span> <span>Thrill</span>
+          </div>
+          <span class="blog-date">17 Jan 2026</span>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="blog-card">
+        <img src="images/ex10.png" alt="" />
+        <h3>Monsoon Retreats: Dancing in the Rain</h3>
+        <div class="blog-card-footer">
+          <div class="blog-tags">
+            <span>Monsoon</span> <span>Romance</span>
+          </div>
+          <span class="blog-date">16 Jan 2026</span>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="blog-card">
+        <img src="images/ex11.png" alt="" />
+        <h3>Dhom Dam Diaries: Sunset Reflections</h3>
+        <div class="blog-card-footer">
+          <div class="blog-tags">
+            <span>Viewpoints</span> <span>Photography</span>
+          </div>
+          <span class="blog-date">15 Jan 2026</span>
+        </div>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="blog-card">
+        <img src="images/ex12.png" alt="" />
+        <h3>Colonial Architecture: Walking Through Time</h3>
+        <div class="blog-card-footer">
+          <div class="blog-tags">
+            <span>Architecture</span> <span>History</span>
+          </div>
+          <span class="blog-date">14 Jan 2026</span>
+        </div>
+      </div>
+
+      <!-- CARD 8 -->
+      <div class="blog-card">
+        <img src="images/ex13.png" alt="" />
+        <h3>Camping Under Stars: Wilderness Nights</h3>
+        <div class="blog-card-footer">
+          <div class="blog-tags">
+            <span>Camping</span> <span>Stargazing</span>
+          </div>
+          <span class="blog-date">13 Jan 2026</span>
+        </div>
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="blog-card">
+        <img src="images/ex14.png" alt="" />
+        <h3>Horse Riding Trails: Galloping Through Valleys</h3>
+        <div class="blog-card-footer">
+          <div class="blog-tags">
+            <span>Activities</span> <span>Adventure</span>
+          </div>
+          <span class="blog-date">12 Jan 2026</span>
+        </div>
+      </div>
+
+      <!-- CARD 10 -->
+      <div class="blog-card">
+        <img src="images/ex4.png" alt="" />
+        <h3>Bonfire Evenings: Stories and S'mores</h3>
+        <div class="blog-card-footer">
+          <div class="blog-tags">
+            <span>Experience</span> <span>Family</span>
+          </div>
+          <span class="blog-date">11 Jan 2026</span>
+        </div>
+      </div>
+
+      <!-- CARD 11 -->
+      <div class="blog-card">
+        <img src="images/hom5.png" alt="" />
+        <h3>Meditation Mornings: Mindfulness in the Mist</h3>
+        <div class="blog-card-footer">
+          <div class="blog-tags">
+            <span>Wellness</span> <span>Meditation</span>
+          </div>
+          <span class="blog-date">10 Jan 2026</span>
+        </div>
+      </div>
+
+      <!-- CARD 12 -->
+      <div class="blog-card">
+        <img src="images/hom6.png" alt="" />
+        <h3>Bird Watching Paradise: Feathered Friends of the Hills</h3>
+        <div class="blog-card-footer">
+          <div class="blog-tags">
+            <span>Wildlife</span> <span>Nature</span>
+          </div>
+          <span class="blog-date">09 Jan 2026</span>
+        </div>
+      </div>
+
+      <!-- CARD 13 -->
+      <div class="blog-card">
+        <img src="images/hom7.png" alt="" />
+        <h3>Winter Wonderland: Cozy Escapes and Hot Chocolate</h3>
+        <div class="blog-card-footer">
+          <div class="blog-tags">
+            <span>Winter</span> <span>Seasonal</span>
+          </div>
+          <span class="blog-date">08 Jan 2026</span>
+        </div>
+      </div>
+
+      <!-- CARD 14 -->
+      <div class="blog-card">
+        <img src="images/hom8.png" alt="" />
+        <h3>Local Markets: Treasures of the Hills</h3>
+        <div class="blog-card-footer">
+          <div class="blog-tags">
+            <span>Shopping</span> <span>Local Culture</span>
+          </div>
+          <span class="blog-date">07 Jan 2026</span>
+        </div>
+      </div>
+
+      <!-- CARD 15 -->
+      <div class="blog-card">
+        <img src="images/ex2.png" alt="" />
+        <h3>Romantic Getaways: Love in the Clouds</h3>
+        <div class="blog-card-footer">
+          <div class="blog-tags">
+            <span>Romance</span> <span>Couples</span>
+          </div>
+          <span class="blog-date">06 Jan 2026</span>
+        </div>
+      </div>
+
+      <!-- CARD 16 -->
+      <div class="blog-card">
+        <img src="images/ex3.png" alt="" />
+        <h3>Photography Masterclass: Capturing Mountain Majesty</h3>
+        <div class="blog-card-footer">
+          <div class="blog-tags">
+            <span>Photography</span> <span>Workshop</span>
+          </div>
+          <span class="blog-date">05 Jan 2026</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- PAGINATION -->
+    <div class="pagination">
+      <button onclick="prevPage()">‹</button>
+      <span id="pageIndicator">Pg 1 / 3</span>
+      <button onclick="nextPage()">›</button>
+    </div>
+  </section>
+
+
+  <!-- PAGINATION SCRIPT -->
+  <script>
+    let currentPage = 1;
+    const cardsPerPage = 6;
+    const totalCards = 16;
+    const totalPages = Math.ceil(totalCards / cardsPerPage);
+
+    function showPage(page) {
+      const blogCards = document.querySelectorAll('.blog-card');
+      const startIndex = (page - 1) * cardsPerPage;
+      const endIndex = startIndex + cardsPerPage;
+
+      blogCards.forEach((card, index) => {
+        if (index >= startIndex && index < endIndex) {
+          card.style.display = 'block';
+          // Add fade-in animation
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, (index - startIndex) * 50);
+        } else {
+          card.style.display = 'none';
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(20px)';
+        }
+      });
+
+      // Scroll to top of blog section smoothly
+      document.querySelector('.blogs-list-section').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+
+    function nextPage() {
+      if (currentPage < totalPages) {
+        currentPage++;
+        updatePage();
+        showPage(currentPage);
+      }
+    }
+
+    function prevPage() {
+      if (currentPage > 1) {
+        currentPage--;
+        updatePage();
+        showPage(currentPage);
+      }
+    }
+
+    function updatePage() {
+      document.getElementById("pageIndicator").innerText = `Pg ${currentPage} / ${totalPages}`;
+
+      // Update button states
+      const prevBtn = document.querySelector('.pagination button:first-child');
+      const nextBtn = document.querySelector('.pagination button:last-child');
+
+      prevBtn.disabled = currentPage === 1;
+      nextBtn.disabled = currentPage === totalPages;
+
+      prevBtn.style.opacity = currentPage === 1 ? '0.5' : '1';
+      nextBtn.style.opacity = currentPage === totalPages ? '0.5' : '1';
+      prevBtn.style.cursor = currentPage === 1 ? 'not-allowed' : 'pointer';
+      nextBtn.style.cursor = currentPage === totalPages ? 'not-allowed' : 'pointer';
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      // Add transition styles to all cards
+      const blogCards = document.querySelectorAll('.blog-card');
+      blogCards.forEach(card => {
+        card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+      });
+
+      showPage(1);
+      updatePage();
+    });
+  </script>
+
+
+
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const blogHeading = document.querySelector(".blog-heading");
+    const featuredBlog = document.querySelector(".featured-blog");
+    searchInput.addEventListener("keyup", function () {
+      let value = searchInput.value.toLowerCase();
+      if (blogHeading.textContent.toLowerCase().includes(value)) {
+        featuredBlog.style.display = "block";
+      } else {
+        featuredBlog.style.display = "none";
+      }
+    });
+  </script>
+
+
+  <!-- FOOTER -->
+  <div id="footer-container"></div>
+  <script src="js/include-footer.js"></script>
+  <script src="js/menu.js"></script>
+
+
+</body>
+
+</html>

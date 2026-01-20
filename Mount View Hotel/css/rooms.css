@@ -1,0 +1,543 @@
+.room-hero {
+  position: relative;
+  min-height: 100vh;
+  font-family: "Georgia", serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* BACKGROUND IMAGE */
+.room-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.room-bg.fade-out {
+  opacity: 0;
+}
+
+/* CENTER CARD */
+.room-card-box {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  width: 560px;
+  padding: 35px 40px;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 70px;
+}
+
+/* TEXT */
+.room-title {
+  font-size: 34px;
+  margin-bottom: 30px;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.room-subtitle {
+  font-size: 14px;
+  color: #a55332;
+  letter-spacing: 1px;
+  margin: 20px 0 10px;
+}
+
+.room-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* IMAGE STRIP */
+.room-gallery {
+  display: flex;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.room-gallery img {
+  width: 31.5%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* FEATURES */
+.room-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.room-features div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* FOOTER */
+.room-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.call-link {
+  font-size: 13px;
+  color: #333;
+}
+
+.book-btn {
+  background: #a55332;
+  color: #fff !important;
+  padding: 10px 22px;
+  border-radius: 22px;
+  text-decoration: none;
+}
+
+/* ARROWS */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffff;
+  border: none;
+  font-size: 26px;
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+  opacity: 0.8;
+}
+
+.prev {
+  left: 320px;
+}
+
+.next {
+  right: 320px;
+}
+
+.room-gallery img {
+  cursor: pointer;
+}
+
+
+/* ================= MOBILE ================= */
+
+
+@media (max-width: 1366px) {
+
+  .room-card-box {
+    width: 530px;
+    padding: 32px 36px;
+  }
+
+  .room-title {
+    font-size: 30px;
+  }
+
+  .room-gallery img {
+    height: 100px;
+  }
+
+  .room-features {
+    gap: 16px;
+    font-size: 12.5px;
+  }
+
+  /* arrows slightly closer */
+  .prev {
+    left: 220px;
+  }
+
+  .next {
+    right: 220px;
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .room-card-box {
+    width: 460px;
+  }
+
+  .room-title {
+    font-size: 28px;
+  }
+
+  .room-desc {
+    font-size: 13.5px;
+  }
+
+  .room-gallery img {
+    height: 95px;
+  }
+
+  .room-features {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .prev {
+    left: 180px;
+  }
+
+  .next {
+    right: 180px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .room-card-box {
+    width: 90%;
+    max-width: 440px;
+    padding: 30px 28px;
+  }
+
+  .room-title {
+    font-size: 26px;
+  }
+
+  .room-subtitle {
+    font-size: 13px;
+  }
+
+  .room-desc {
+    font-size: 13px;
+  }
+
+  .room-gallery {
+    gap: 10px;
+  }
+
+  .room-gallery img {
+    height: 90px;
+  }
+
+  .room-features {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    font-size: 12px;
+  }
+
+  .room-footer {
+    margin-top: 26px;
+  }
+
+  /* arrows stay but closer */
+  .prev {
+    left: 120px;
+  }
+
+  .next {
+    right: 120px;
+  }
+}
+
+
+/* ================= MOBILE FINAL (720px → 350px) ================= */
+
+@media (max-width: 720px) {
+
+  .room-hero {
+    align-items: flex-start;
+    padding: 40px 0;
+  }
+
+  .room-card-box {
+    width: 92%;
+    max-width: 420px;
+    margin-top: 40px;
+    padding: 28px 22px;
+    border-radius: 6px;
+  }
+
+  /* TITLE */
+  .room-title {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+
+  /* DESCRIPTION */
+  .room-desc {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* ✅ IMAGE GALLERY — DESCRIPTION KE NICHE HI */
+  .room-gallery {
+    margin: 22px 0;
+    gap: 10px;
+    flex-direction: row;
+    /* IMPORTANT */
+  }
+
+  .room-gallery img {
+    width: 31.5%;
+    height: 90px;
+    border-radius: 4px;
+  }
+
+  /* FEATURES — IMAGE KE BAAD */
+  .room-features {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    font-size: 11.5px;
+    margin-top: 18px;
+  }
+
+  .feature-item img {
+    width: 22px;
+    height: 22px;
+    margin-bottom: 4px;
+  }
+
+  /* FOOTER BUTTONS — SAME AS DESKTOP */
+  .room-footer {
+    margin-top: 26px;
+    gap: 10px;
+  }
+
+  .call-link {
+    display: none;
+    font-size: 12px;
+  }
+
+  .book-btn {
+    padding: 9px 18px;
+    font-size: 13px;
+  }
+
+
+}
+
+
+/* ================= SMALL MOBILE (480px → 350px) ================= */
+
+@media (max-width: 480px) {
+
+  .room-card-box {
+    padding: 24px 18px;
+  }
+
+  .room-title {
+    font-size: 22px;
+  }
+
+  .room-gallery img {
+    height: 80px;
+  }
+
+  .room-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    font-size: 11px;
+  }
+
+  .feature-item img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .book-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
+/* ================= MOBILE BOTTOM NAV FIX ================= */
+
+@media (max-width: 720px) {
+
+  /* arrows wapas dikhao */
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 72%;
+    bottom: 18px;
+    transform: none;
+    width: 32px;
+    height: 15px;
+    font-size: 28px;
+    border-radius: 50%;
+    opacity: 1;
+  }
+
+  /* left arrow */
+  .prev {
+    left: 150px;
+    right: auto;
+  }
+
+  /* right arrow */
+  .next {
+    right: 150px;
+    left: auto;
+  }
+
+  /* page indicator bottom center */
+  #slideIndicator {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    color: #333;
+    z-index: 5;
+  }
+
+  /* footer spacing so arrows don't overlap */
+  .room-footer {
+    padding-bottom: 40px;
+  }
+}
+
+
+/* ================= SMALL MOBILE (480px → 350px) ================= */
+
+@media (max-width: 480px) {
+
+  .nav {
+    width: 32px;
+    top: 69%;
+    height: 15px;
+    font-size: 28px;
+  }
+
+  .prev {
+    left: 34px;
+  }
+
+  .next {
+    right: 34px;
+  }
+
+  #slideIndicator {
+    font-size: 12px;
+    bottom: 26px;
+  }
+}
+
+@media (max-width: 380px) {
+
+  .nav {
+    width: 32px;
+    top: 73%;
+    height: 15px;
+    font-size: 28px;
+  }
+
+  .prev {
+    left: 35px;
+  }
+
+  .next {
+    right: 35px;
+  }
+
+  #slideIndicator {
+    font-size: 12px;
+    bottom: 26px;
+  }
+}
+
+@media (max-width: 350px) {
+
+  .nav {
+    width: 32px;
+    top: 73%;
+    height: 15px;
+    font-size: 28px;
+  }
+
+  .prev {
+    left: 30px;
+  }
+
+  .next {
+    right: 30px;
+  }
+
+  #slideIndicator {
+    font-size: 12px;
+    bottom: 26px;
+  }
+}
+
+
+/* ================= IMAGE GALLERY POPUP ================= */
+
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.image-modal.active {
+  display: flex;
+}
+
+.image-modal img {
+  max-width: 90%;
+  max-height: 80%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* close button */
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 26px;
+  font-size: 34px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* arrows */
+.modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  font-size: 32px;
+  padding: 1px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.modal-nav.prev {
+  left: 30px;
+}
+
+.modal-nav.next {
+  right: 30px;
+}
+
+/* mobile tweak */
+@media (max-width: 480px) {
+  .modal-nav {
+    font-size: 26px;
+    padding: 4px 10px;
+  }
+}

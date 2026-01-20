@@ -1,0 +1,893 @@
+/* =========================================
+   FIX VIDEO GOING BEHIND NAVBAR
+========================================= */
+.experience-hero {
+    margin-top: 60px;
+    /* Desktop navbar height */
+}
+
+/* If navbar is smaller on mobile */
+@media (max-width: 768px) {
+    .experience-hero {
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-hero {
+        margin-top: 50px;
+    }
+}
+
+/* =========================================
+   Disable Default Controls
+========================================= */
+video::-webkit-media-controls {
+    display: none !important;
+}
+
+video::-webkit-media-controls-play-button {
+    display: none !important;
+}
+
+/* =========================================
+   VIDEO WRAPPER
+========================================= */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Full screen */
+    overflow: hidden;
+}
+
+.experience-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================================
+   CUSTOM PLAY BUTTON
+========================================= */
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.2s ease-in-out;
+}
+
+.play-btn svg {
+    width: 150px;
+    height: 150px;
+}
+
+.play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+
+
+
+/* ===== OASIS SECTION ===== */
+
+/* ================================
+   OASIS SECTION MAIN STYLES
+================================ */
+.oasis-section {
+    width: 100%;
+    padding: 60px 0 0px;
+    background: #ffffff;
+    text-align: center;
+    font-family: 'Georgia', serif;
+}
+
+/* TEXT CENTER AREA */
+.oasis-text h2 {
+    font-size: 35px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #2d2d2d;
+}
+
+.oasis-text p {
+    font-size: 16px;
+    color: #3d3d3d;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
+.oasis-btn {
+    display: inline-block;
+    background: #c86d53;
+    color: white;
+    padding: 10px 26px;
+    border-radius: 25px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.oasis-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ================================
+   IMAGE COLLAGE LAYOUT
+================================ */
+.oasis-images {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0px;
+}
+
+/* INITIAL IMAGE STATE (ANIMATION START) */
+.oasis-img {
+    width: 100%;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
+
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 0.8s ease-out;
+}
+
+/* WHEN VISIBLE */
+.oasis-img.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* STAGGER EFFECT – EACH IMAGE HAS A DELAY */
+.oasis-img:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.oasis-img:nth-child(2) {
+    transition-delay: 0.3s;
+}
+
+.oasis-img:nth-child(3) {
+    transition-delay: 0.5s;
+}
+
+.oasis-img:nth-child(4) {
+    transition-delay: 0.7s;
+}
+
+.oasis-img:nth-child(5) {
+    transition-delay: 0.9s;
+}
+
+
+/* MAIN SECTION */
+.food-family-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Full screen like screenshot */
+    overflow: hidden;
+}
+
+/* BACKGROUND IMAGE */
+.food-bg {
+    background-image: url("../images/ex1.png");
+    /* Change this */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* TOP–DOWN WHITE GRADIENT OVERLAY */
+.food-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,
+            rgba(255, 255, 255, 0) 70%,
+            rgba(255, 255, 255, 0.8) 90%);
+}
+
+/* BLUR GLASS CARD IN CENTER */
+.food-card {
+    position: absolute;
+    bottom: 15%;
+    /* same alignment as screenshot */
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 60%;
+    max-width: 700px;
+    padding: 35px 45px;
+    background-color: rgba(16, 10, 10, 0.331);
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 12px;
+    text-align: center;
+
+    color: #fff;
+    font-family: "Georgia", serif;
+}
+
+/* TEXT STYLING */
+.food-card h2 {
+    font-size: 35px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+
+.food-card p {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: lighter;
+}
+
+
+
+.amenities-section {
+    width: 100%;
+    background: #ffffff;
+    text-align: center;
+    padding: 70px 0;
+}
+
+.amenities-title {
+    font-family: "Georgia", serif;
+    font-size: 35px;
+    color: #2c2c2c;
+    margin-bottom: 15px;
+    font-weight: lighter;
+}
+
+.amenities-subtitle {
+    font-size: 16px;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    color: #444;
+    line-height: 26px;
+    font-family: "Georgia", serif;
+}
+
+/* ***** 3-COLUMN GRID ***** */
+
+.amenities-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 40px;
+}
+
+.amenity-card {
+    width: 28%;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.amenity-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ***** HOVER OVERLAY ***** */
+
+.amenity-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, rgba(228, 122, 87, 0.913), transparent);
+    opacity: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 25px;
+    transition: 0.4s ease;
+}
+
+.amenity-overlay p {
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    font-family: "Georgia", serif;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.4s ease;
+    letter-spacing: 1px;
+}
+
+.amenity-card:hover .amenity-overlay {
+    opacity: 1;
+}
+
+.amenity-card:hover .amenity-overlay p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 769px) {
+
+    .amenities-section {
+        padding: 36px 18px;
+        background: #ffffff;
+    }
+
+    /* HEADING */
+    .amenities-title {
+        font-family: Georgia, serif;
+        font-size: 35px;
+        font-weight: 500;
+        color: #2e2e2e;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    /* SUBTITLE */
+    .amenities-subtitle {
+        font-size: 20px;
+        width: 100%;
+        line-height: 1.6;
+        margin: 0%;
+        color: #4a4a4a;
+        margin-bottom: 24px;
+        text-align: left;
+    }
+
+    .cta-btn {
+        display: none;
+    }
+
+    /* GRID → STACK */
+    .amenities-grid {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 10px;
+        gap: 18px;
+    }
+
+    /* CARD */
+    .amenity-card {
+        position: relative;
+        border-radius: 2px;
+        overflow: hidden;
+        width: 100%;
+        height: 320px;
+    }
+
+    .amenity-card img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* TEXT OVER IMAGE (BOTTOM LEFT) */
+    .amenity-overlay {
+        opacity: 1;
+        height: auto;
+        background: none;
+        padding-bottom: 0;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 12px;
+    }
+
+    .amenity-overlay p {
+        opacity: 1;
+        transform: none;
+        font-size: 20px;
+        color: #ffffff;
+        margin-bottom: 20px;
+        letter-spacing: 0.5px;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    /* MOBILE: disable hover effect */
+    .amenity-card:hover .amenity-overlay,
+    .amenity-card:hover .amenity-overlay p {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .amenity-card {
+        position: relative;
+        border-radius: 2px;
+        overflow: hidden;
+        width: 100%;
+        height: 200px;
+    }
+
+    .amenity-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* TEXT OVER IMAGE (BOTTOM LEFT) */
+    .amenity-overlay {
+        opacity: 1;
+        height: auto;
+        background: none;
+        padding-bottom: 0;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 1px 20px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .amenity-card {
+        position: relative;
+        border-radius: 2px;
+        overflow: hidden;
+        width: 100%;
+        height: 180px;
+    }
+
+    .amenity-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* TEXT OVER IMAGE (BOTTOM LEFT) */
+    .amenity-overlay {
+        opacity: 1;
+        height: auto;
+        background: none;
+        padding-bottom: 0;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 1px 20px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+
+    /* SECTION */
+    .amenities-section {
+        padding: 70px 40px;
+        background: #ffffff;
+        text-align: center;
+    }
+
+    /* TITLE */
+    .amenities-title {
+        font-family: Georgia, serif;
+        font-size: 32px;
+        font-weight: 500;
+        color: #2e2e2e;
+        margin-bottom: 14px;
+    }
+
+    /* SUBTITLE */
+    .amenities-subtitle {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #4a4a4a;
+        max-width: 640px;
+        margin: 0 auto 28px;
+    }
+
+    /* CTA BUTTON */
+    .cta-btn {
+        display: inline-block;
+        padding: 11px 26px;
+        font-size: 14px;
+        border-radius: 26px;
+        margin-bottom: 42px;
+    }
+
+    /* GRID */
+    .amenities-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 26px;
+        align-items: stretch;
+    }
+
+    /* CARD */
+    .amenity-card {
+        position: relative;
+        border-radius: 14px;
+        overflow: hidden;
+    }
+
+    .amenity-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* OVERLAY (tablet pe hover allowed) */
+    .amenity-overlay {
+        padding-bottom: 18px;
+    }
+
+    .amenity-overlay p {
+        font-size: 18px;
+        letter-spacing: 0.5px;
+    }
+
+}
+
+
+/* EXPLORE SECTION */
+.explore-section {
+    width: 100%;
+    padding: 0px 0;
+    /* top-bottom only */
+    background: #ffffff;
+}
+
+/* LEFT-ALIGNED TEXT */
+.explore-text {
+    width: 100%;
+    max-width: 1200px;
+    margin: 70px 115px;
+    text-align: left;
+    /* ← left align */
+}
+
+.explore-text h2 {
+    font-size: 35px;
+    font-family: Georgia, serif;
+    margin-bottom: 20px;
+    font-weight: lighter;
+}
+
+.explore-text p {
+    font-size: 16px;
+    font-family: Georgia, serif;
+    color: #333;
+}
+
+/* FULL WIDTH IMAGE GRID – NO SIDE SPACE */
+.explore-images {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px;
+    /* NO space between images */
+    padding: 0;
+    /* IMPORTANT: remove side padding */
+    margin: 0;
+}
+
+/* EACH CARD */
+.explore-card {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* IMAGES FULL WIDTH – TOUCH BOTH EDGES */
+.explore-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* LABEL TEXT INSIDE IMAGE */
+.img-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 20px;
+    font-family: Georgia, serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* SCROLL ANIMATION */
+.scroll-img {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.8s ease-out;
+}
+
+.scroll-img.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.spotlight-section {
+    display: grid;
+    grid-template-columns: 62% 38%;
+    padding: 80px 120px;
+    gap: 80px;
+    background: #ffffff;
+    font-family: "Georgia", serif;
+}
+
+/* LEFT SIDE */
+.spotlight-title {
+    font-size: 35px;
+    color: #4b3621;
+    font-style: italic;
+    margin-bottom: 25px;
+    font-weight: lighter
+}
+
+.spotlight-card {
+    position: relative;
+    width: 100%;
+}
+
+.spotlight-img {
+    width: 100%;
+    height: 420px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.latest-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.spotlight-heading {
+    font-size: 35px;
+    font-weight: lighter;
+    margin-top: 35px;
+    color: #2d2d2d;
+}
+
+/* AUTHOR BOX */
+.author-box {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.author-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+.author-name {
+    font-size: 16px;
+    color: #3d3d3d;
+}
+
+
+/* RIGHT SIDE — TRENDING */
+.trending-title {
+    font-size: 35px;
+    font-weight: lighter;
+    color: #4b3621;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.trending-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.trend-img {
+    width: 110px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.trend-text {
+    font-size: 16px;
+    color: #2d2d2d;
+    line-height: 1.5;
+    max-width: 260px;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: #d8d2cb;
+    margin: 20px 0;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .spotlight-section {
+        grid-template-columns: 1fr;
+        padding: 50px 40px;
+    }
+
+    .trending-right {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .spotlight-img {
+        height: 300px;
+    }
+
+    .spotlight-heading {
+        font-size: 26px;
+    }
+
+    .trend-img {
+        width: 90px;
+        height: 65px;
+    }
+}
+
+
+/* RESPONSIVE GRID */
+@media (max-width: 992px) {
+    .explore-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .explore-images {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .food-card {
+        width: 80%;
+        padding: 25px;
+        bottom: 10%;
+    }
+
+    .food-card h2 {
+        font-size: 24px;
+    }
+
+    .food-card p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .food-card {
+        width: 90%;
+        padding: 20px;
+        bottom: 8%;
+    }
+
+    .food-card h2 {
+        font-size: 20px;
+    }
+
+    .food-card p {
+        font-size: 14px;
+    }
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 992px) {
+    .oasis-images {
+        gap: 0px;
+    }
+
+    .oasis-img {
+        width: 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .oasis-text h2 {
+        font-size: 28px;
+    }
+
+    .oasis-img {
+        width: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .oasis-text p {
+        font-size: 14px;
+    }
+
+    .oasis-img {
+        width: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .explore-text {
+        margin: 55px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .explore-text {
+        margin: 55px 10px;
+    }
+}
+
+/* =========================================
+   RESPONSIVE PLAY BUTTON ADJUSTMENTS
+========================================= */
+
+/* -------- Tablet -------- */
+@media (max-width: 1024px) {
+    .video-wrapper {
+        height: 80vh;
+    }
+
+    .play-btn svg {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* -------- Mobile (big) -------- */
+@media (max-width: 768px) {
+    .video-wrapper {
+        height: 70vh;
+    }
+
+    .play-btn svg {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+/* -------- Mobile (small) -------- */
+@media (max-width: 480px) {
+    .video-wrapper {
+        height: 60vh;
+    }
+
+    .play-btn svg {
+        width: 70px;
+        height: 70px;
+    }
+}

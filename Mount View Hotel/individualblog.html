@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events - Mountview</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/individualblog.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <script src="js/menu.js"></script>
+    <script src="js/include-navbar.js"></script>
+
+    <section class="blog-hero">
+      <img
+        src="images/blog-hero.png"
+        alt="Panchgani View"
+        class="blog-hero-img"
+      />
+    </section>
+
+    <section class="blog-content-section">
+      <div class="blog-layout">
+        <!-- LEFT SIDEBAR -->
+        <aside class="blog-sidebar">
+          <h2 class="blog-title">Spend a weekend<br />at Panchgani</h2>
+
+          <p class="blog-date">27 Nov 2023</p>
+
+          <div class="blog-tags">
+            <span class="tag">Panchgani</span>
+            <span class="tag">Tonic’s picks</span>
+          </div>
+        </aside>
+
+        <!-- RIGHT MAIN CONTENT -->
+        <article class="blog-main">
+          <h2 class="blog-heading">Lorem ipsum dolor sit ame</h2>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+
+          <!-- INLINE IMAGE -->
+          <div class="blog-image-container">
+            <img src="images/blog-hero.png" alt="Blog Image" />
+            <span class="img-caption">Trodly</span>
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="related-articles">
+      <h2 class="related-title">Related articles</h2>
+
+      <div class="related-wrapper">
+        <button class="slide-btn prev-btn">&#10094;</button>
+
+        <div class="related-slider">
+          <!-- CARD 1 -->
+          <div class="related-card">
+            <img src="images/ev-slide2.png" alt="" />
+            <h3>Best way to spend a day at panchgani</h3>
+
+            <div class="tags">
+              <span>Panchgani</span>
+              <span>Tourist spots</span>
+            </div>
+
+            <p class="date">27 Nov 2021</p>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="related-card">
+            <img src="images/ev-slide1.png" alt="" />
+            <h3>Best way to spend a day at panchgani</h3>
+
+            <div class="tags">
+              <span>Panchgani</span>
+              <span>Tourist spots</span>
+            </div>
+
+            <p class="date">27 Nov 2021</p>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="related-card">
+            <img src="images/ev-slide3.png" alt="" />
+            <h3>Best way to spend a day at panchgani</h3>
+
+            <div class="tags">
+              <span>Panchgani</span>
+              <span>Tourist spots</span>
+            </div>
+
+            <p class="date">27 Nov 2021</p>
+          </div>
+        </div>
+
+        <button class="slide-btn next-btn">&#10095;</button>
+      </div>
+    </section>
+
+    <script>
+      const slider = document.querySelector(".related-slider");
+      const prev = document.querySelector(".prev-btn");
+      const next = document.querySelector(".next-btn");
+
+      next.addEventListener("click", () => {
+        slider.scrollBy({ left: 250, behavior: "smooth" });
+      });
+
+      prev.addEventListener("click", () => {
+        slider.scrollBy({ left: -250, behavior: "smooth" });
+      });
+    </script>
+
+    <div id="footer-container"></div>
+    <script src="js/include-footer.js"></script>
+
+    <script src="js/slider.js"></script>
+    <script src="js/menu.js"></script>
+  </body>
+</html>

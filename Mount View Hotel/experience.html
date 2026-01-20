@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events - Mountview</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/experience.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+
+<body>
+  <div id="navbar"></div>
+  <script src="js/menu.js"></script>
+  <script src="js/include-navbar.js"></script>
+
+  <section class="experience-hero">
+    <div class="video-wrapper">
+      <video id="experienceVideo" class="experience-video" playsinline>
+        <source src="videos/vatsara_006.mov" type="video/mp4" />
+      </video>
+
+      <!-- Custom Play Button -->
+      <div id="playButton" class="play-btn">
+        <svg viewBox="0 0 200 200">
+          <polygon points="70,55 70,145 145,100" fill="rgba(255,255,255,0.5)" stroke="black" stroke-width="0.5" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const video = document.getElementById("experienceVideo");
+    const playBtn = document.getElementById("playButton");
+
+    playBtn.addEventListener("click", () => {
+      video.play();
+      playBtn.style.display = "none"; // Hide button after play
+    });
+
+    video.addEventListener("pause", () => {
+      playBtn.style.display = "block"; // Show again if video paused
+    });
+  </script>
+
+  <section class="oasis-section">
+    <div class="oasis-text">
+      <h2>Step into our oasis</h2>
+      <p>
+        Mount View hotel creates an escape from the hustle <br />
+        of the city. Come in, Disconnect
+      </p>
+
+      <a href="rooms.html" class="oasis-btn">Book Now</a>
+    </div>
+
+    <div class="oasis-images">
+      <img src="images/ex10.png" class="oasis-img scroll-img" />
+      <img src="images/ex11.png" class="oasis-img scroll-img" />
+      <img src="images/ex12.png" class="oasis-img scroll-img" />
+      <img src="images/ex13.png" class="oasis-img scroll-img" />
+      <img src="images/ex14.png" class="oasis-img scroll-img" />
+    </div>
+  </section>
+
+  <script>
+    const images = document.querySelectorAll(".oasis-img");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    images.forEach((img) => observer.observe(img));
+  </script>
+
+  <section class="food-family-section">
+    <!-- Background Image -->
+    <div class="food-bg"></div>
+
+    <!-- White fade overlay -->
+    <div class="food-overlay"></div>
+
+    <!-- Center Blur Card -->
+    <div class="food-card">
+      <h2>Lets have a family style meal</h2>
+      <p>
+        Join us for a Parsi family style meal. Indulge in delicacies like
+        Dhansak, Farcha and many more
+      </p>
+    </div>
+  </section>
+
+  <section class="amenities-section">
+    <h2 class="amenities-title">Let Mountview spoil you</h2>
+    <p class="amenities-subtitle">
+      Mount View's strategic location makes it easy to visit all local wonders
+      and viewpoints
+    </p>
+
+    <div class="amenities-grid">
+      <!-- CARD 1 -->
+      <div class="amenity-card">
+        <img src="images/ex2.png" alt="" />
+        <div class="amenity-overlay">
+          <p>Cozy rooms</p>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="amenity-card">
+        <img src="images/ex3.png" alt="" />
+        <div class="amenity-overlay">
+          <p>Adventure</p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="amenity-card">
+        <img src="images/ex4.png" alt="" />
+        <div class="amenity-overlay">
+          <p>Bonfire</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="explore-section">
+    <div class="explore-text">
+      <h2>Explore Panchgani</h2>
+      <p>
+        Mount View’s strategic location makes it
+        <br />
+        easy to visit all local wonders and viewpoints.
+      </p>
+    </div>
+
+    <div class="explore-images">
+      <!-- IMAGE 1 — always visible -->
+      <div class="explore-card show" style="z-index: 4">
+        <img src="images/ex15.png" alt="Viewpoints" />
+      </div>
+
+      <!-- IMAGE 2 — scroll reveal -->
+      <div class="explore-card scroll-img" style="z-index: 3">
+        <img src="images/ex17.png" alt="Gardens" />
+      </div>
+
+      <!-- IMAGE 3 — scroll reveal -->
+      <div class="explore-card scroll-img" style="z-index: 2">
+        <img src="images/ex16.png" alt="Galleries" />
+      </div>
+
+      <!-- IMAGE 4 — scroll reveal -->
+      <div class="explore-card scroll-img" style="z-index: 1">
+        <img src="images/ex18.png" alt="Adventure sports" />
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const scrollCards = document.querySelectorAll(".scroll-img");
+
+    function revealOnScroll() {
+      scrollCards.forEach((card, index) => {
+        const position = card.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+
+        if (position < screenHeight - 100) {
+          setTimeout(() => {
+            card.classList.add("show");
+          }, index * 150); // stagger animation
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll(); // Run on load
+  </script>
+
+
+  <section class="spotlight-section">
+    <!-- LEFT SIDE : SPOTLIGHT -->
+    <div class="spotlight-left">
+      <h3 class="spotlight-title">Spotlight</h3>
+
+      <div class="spotlight-card">
+        <img src="images/ex6.png" alt="Spotlight Image" class="spotlight-img" />
+
+        <button class="latest-btn">Latest article</button>
+      </div>
+
+      <h2 class="spotlight-heading">Best way to spend a day at panchgani</h2>
+
+      <div class="author-box">
+        <img src="images/ex5.png" class="author-img" />
+        <span class="author-name">Sakshi Maheshwari</span>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE : TRENDING -->
+    <div class="trending-right">
+      <h3 class="trending-title">Trending</h3>
+
+      <div class="trending-item">
+        <img src="images/ex7.png" class="trend-img" />
+        <p class="trend-text">
+          The Art of Doing Nothing: Slow Travel in the Hills
+        </p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="trending-item">
+        <img src="images/ex8.png" class="trend-img" />
+        <p class="trend-text">
+          Table Land at Sunset: Panchgani’s Crown Jewel
+        </p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="trending-item">
+        <img src="images/ex9.png" class="trend-img" />
+        <p class="trend-text">
+          Devrai Art Village: Where Nature Inspires Craft
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+  <script src="js/include-footer.js"></script>
+
+  <script src="js/slider.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+
+</html>

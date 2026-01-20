@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events - Mountview</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/events.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+
+<body>
+  <div id="navbar"></div>
+  <script src="js/menu.js"></script>
+  <script src="js/include-navbar.js"></script>
+
+  <section class="events-hero">
+    <div class="hero-overlay">
+      <h1>Events At Mountview</h1>
+      <p>
+        Our luscious lawns, Dreamy decor and other wonderful <br />
+        amenities let you celebrate with your loved ones carefree.
+      </p>
+      <a href="tel:+" class="enquire-btn">Enquire Now</a>
+    </div>
+  </section>
+
+  <section class="celebrate-image-section">
+    <img src="images/ev2.png" alt="Celebrate Section Image" class="evnt-desktop" />
+
+    <img src="images/ev16.png" class="evnt-mobile" alt="Opener" />
+  </section>
+
+  <section class="event-slider-section">
+    <div class="event-slider-container">
+      <!-- LEFT CONTENT (Changes per slide) -->
+      <div class="event-slider-left">
+        <p class="label" id="slideLabel">OUR EVENT SPACES</p>
+
+        <h2 id="slideTitle">Entire Property</h2>
+
+        <p class="desc" id="slideDesc">
+          Make Mount View entirely yours. Book the whole property for an
+          exclusive celebration, where every corner becomes part of your story
+          and the hills stand witness to your special moments.
+        </p>
+
+        <p class="capacity" id="slideCapacity">
+          Capacity: 120 Pax event, 35 Pax stay
+        </p>
+
+        <a href="tel:+" class="enquire-btn-2">Enquire now</a>
+
+        <!-- Slider Navigation -->
+        <div class="slider-controls">
+          <span class="arrow left" onclick="prevSlide()">&#8592;</span>
+
+          <div class="dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+          </div>
+
+          <span class="arrow right" onclick="nextSlide()">&#8594;</span>
+        </div>
+      </div>
+
+      <!-- RIGHT SLIDER IMAGES -->
+      <div class="event-slider-right">
+        <!-- SLIDE IMAGES (Replace src with your own images) -->
+        <img class="slide active" src="images/ev3.png" alt="" />
+        <!-- add image 1 here -->
+        <img class="slide" src="images/ev4.png" alt="" />
+        <!-- add image 2 here -->
+        <img class="slide" src="images/ev5.png" alt="" />
+        <!-- add image 3 here -->
+      </div>
+    </div>
+  </section>
+
+  <section class="amenities-section">
+    <h2 class="amenities-title">Amenities offered</h2>
+    <p class="amenities-subtitle">
+      Mount View offers seamless end-to-end event management from venue setup
+      and catering to stay arrangements and every little detail in between.
+    </p>
+
+    <div class="amenities-grid">
+      <!-- CARD 1 -->
+      <div class="amenity-card">
+        <img src="images/ev8.png" alt="" />
+        <div class="amenity-overlay">
+          <p>Yummy Meals</p>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="amenity-card">
+        <img src="images/ev6.png" alt="" />
+        <div class="amenity-overlay">
+          <p>Ample decoration</p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="amenity-card">
+        <img src="images/ev7.png" alt="" />
+        <div class="amenity-overlay">
+          <p>Cozy rooms</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="picture-gallery-container">
+    <div class="gallery-text">
+      <h2 class="gallery-title">Picture gallery</h2>
+      <p class="gallery-subtitle">
+        We have hosted multiple events in our space, have a look, let us host
+        you and your loved ones next!
+      </p>
+    </div>
+
+    <div class="collage-wrapper">
+      <div class="collage-item item-1">
+        <img src="images/ev9.png" alt="Forest path" />
+      </div>
+      <div class="collage-item item-2">
+        <img src="images/ev10.png" alt="Hotel front" />
+      </div>
+      <div class="collage-item item-3">
+        <img src="images/ev11.png" alt="Mandap" />
+      </div>
+      <div class="collage-item item-4">
+        <img src="images/ev12.png" alt="Lawn setup" />
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+  <script src="js/include-footer.js"></script>
+
+  <script src="js/sliderevent.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+
+</html>
