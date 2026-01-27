@@ -84,7 +84,7 @@ video::-webkit-media-controls-play-button {
 ================================ */
 .oasis-section {
     width: 100%;
-    padding: 60px 0 0px;
+    padding: 60px 0 100px;
     background: #ffffff;
     text-align: center;
     font-family: 'Georgia', serif;
@@ -125,23 +125,47 @@ video::-webkit-media-controls-play-button {
    IMAGE COLLAGE LAYOUT
 ================================ */
 .oasis-images {
-    margin-top: 80px;
+    margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     justify-content: center;
-    align-items: flex-end;
-    gap: 0px;
+    align-items: center;
+    gap: 18px;
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* INITIAL IMAGE STATE (ANIMATION START) */
 .oasis-img {
     width: 100%;
     object-fit: cover;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
 
     opacity: 0;
     transform: translateY(80px);
-    transition: all 0.8s ease-out;
+    transition: all 0.8s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.oasis-img:nth-child(1) {
+    height: 450px;
+}
+
+.oasis-img:nth-child(2) {
+    height: 380px;
+}
+
+.oasis-img:nth-child(3) {
+    height: 500px;
+}
+
+.oasis-img:nth-child(4) {
+    height: 360px;
+}
+
+.oasis-img:nth-child(5) {
+    height: 420px;
 }
 
 /* WHEN VISIBLE */
@@ -812,7 +836,8 @@ video::-webkit-media-controls-play-button {
 ================================ */
 @media (max-width: 992px) {
     .oasis-images {
-        gap: 0px;
+        gap: 10px;
+        grid-template-columns: repeat(5, 1fr);
     }
 
     .oasis-img {

@@ -554,6 +554,7 @@
 ------------------------------------------- */
 
 .picture-gallery-container {
+  --footer-blend: #FDF8F1;
   width: 100%;
   background: #FDF8F1;
   /* Beige background as seen in the image */
@@ -640,7 +641,7 @@
 .item-4 {
   width: 38%;
   height: 380px;
-  right: -5%;
+  right: 0;
   top: 420px;
   z-index: 1;
 }
@@ -741,7 +742,7 @@
   .item-4 {
     width: 42%;
     height: 180px;
-    right: -2%;
+    right: 0;
     top: 200px;
   }
 }

@@ -1448,198 +1448,277 @@ img[data-hover] {
 /* LAST SECTION */
 /* ================= REVIEWS SECTION ================= */
 
+/* ================= REVIEWS SECTION ================= */
+
 .reviews-section {
   background: #ffffff;
-  padding: 120px 0 80px;
+  padding: 150px 0;
   text-align: center;
   overflow: hidden;
+  perspective: 2000px;
+  position: relative;
 }
 
 .reviews-title {
   font-family: "Georgia", serif;
-  font-size: 36px;
+  font-size: 48px;
   font-weight: lighter;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   color: #2d2d2d;
+  letter-spacing: 2px;
+  font-style: italic;
 }
 
 .reviews-cards {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0;
-  padding: 0 60px;
+  gap: 20px;
+  /* Use gap instead of overlap for hitboxes */
+  padding: 80px 4% 120px;
   position: relative;
+  /* preserve-3d can sometimes swallow hovers on absolute kids, removing for stability */
 }
 
-/* CARD BASE */
+/* CARD ADVANCED BASE */
 .review-card {
-  width: 240px;
-  height: 340px;
-  background: #fff;
-  border-radius: 6px;
+  width: 280px;
+  height: 420px;
+  background: #f9f9f9;
+  border-radius: 20px;
   overflow: hidden;
   position: relative;
-  margin: 0 -25px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
-  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  filter: grayscale(0.5) brightness(0.9);
+  flex-shrink: 0;
 }
 
 .review-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 1.2s ease;
 }
 
-/* TEXT OVERLAY */
+/* ADVANCED GLASS OVERLAY */
 .review-info {
   position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 30px 22px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.4) 50%,
+      transparent 100%);
+  padding: 40px 30px;
   opacity: 0;
-  transform: translateY(30px);
-  transition: 0.5s ease;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+  backdrop-filter: blur(0px);
+  transition: all 0.6s ease;
+  transform: translateY(20px);
 }
 
 .review-info p {
-  font-family: Georgia, serif;
-  font-size: 14px;
-  line-height: 1.6;
-  color: #333;
-  margin-bottom: 15px;
+  font-family: "Georgia", serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #fff;
+  margin-bottom: 20px;
+  font-style: italic;
+  font-weight: 300;
 }
 
 .stars {
-  color: #a55332;
-  font-size: 16px;
-  margin-bottom: 6px;
+  color: #d4af37;
+  /* Metallic gold */
+  font-size: 14px;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
 }
 
 .author {
-  font-size: 13px;
-  color: #666;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-/* HOVER EFFECT */
+/* PREMIUM HOVER STATES */
 .review-card:hover {
-  transform: rotate(0deg) scale(1.05);
-  z-index: 5;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+  filter: grayscale(0) brightness(1);
+  transform: translateY(-40px) scale(1.1) rotate(0deg) !important;
+  z-index: 50 !important;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212, 175, 55, 0.2);
+}
+
+.review-card:hover img {
+  transform: scale(1.1);
 }
 
 .review-card:hover .review-info {
   opacity: 1;
   transform: translateY(0);
+  backdrop-filter: blur(8px);
 }
 
 /* ================= ROTATIONS ================= */
 
+/* ARC POSITIONS - Using flex-based translation for stability */
 .rotate-1 {
-  transform: rotate(-8deg);
+  transform: rotate(-12deg) translateY(40px);
 }
 
 .rotate-2 {
-  transform: rotate(-4deg);
+  transform: rotate(-6deg) translateY(10px);
 }
 
 .rotate-3 {
-  transform: rotate(0deg);
+  transform: rotate(0deg) translateY(-10px);
+  z-index: 5;
 }
 
 .rotate-4 {
-  transform: rotate(4deg);
+  transform: rotate(6deg) translateY(10px);
 }
 
 .rotate-5 {
-  transform: rotate(8deg);
+  transform: rotate(12deg) translateY(40px);
 }
 
+/* Adding a glow behind the section */
+/* Removed glow for white background */
+
 /* ================= TABLET VIEW ================= */
-@media (min-width: 769px) and (max-width: 1024px) {
-
-  .reviews-section {
-    padding: 100px 0 90px;
-  }
-
+@media (min-width: 769px) and (max-width: 1200px) {
   .reviews-title {
-    margin-left: 60px;
-    font-size: 30px;
-    margin-bottom: 50px;
-    text-align: left;
+    font-size: 38px;
   }
 
-  .reviews-cards {
-    justify-content: center;
-    padding: 0 40px;
-  }
-
-  /* CARD SIZE */
-  .review-card {
-    width: 260px;
-    height: 360px;
-    margin: 0 -18px;
-    /* overlap kam */
-  }
-
-  /* Softer rotations for tablet */
   .rotate-1 {
-    transform: rotate(-5deg);
+    transform: translateX(-350px) translateZ(-150px) rotateY(25deg);
   }
 
   .rotate-2 {
-    transform: rotate(-2.5deg);
-  }
-
-  .rotate-3 {
-    transform: rotate(0deg);
+    transform: translateX(-180px) translateZ(-80px) rotateY(12deg);
   }
 
   .rotate-4 {
-    transform: rotate(2.5deg);
+    transform: translateX(180px) translateZ(-80px) rotateY(-12deg);
   }
 
   .rotate-5 {
-    transform: rotate(5deg);
+    transform: translateX(350px) translateZ(-150px) rotateY(-25deg);
   }
 
-  /* Hover same but smoother */
-  .review-card:hover {
-    transform: rotate(0deg) scale(1.04);
-  }
-
-  /* Text spacing thoda airy */
-  .review-info {
-    padding: 26px 20px;
-  }
-
-  .review-info p {
-    font-size: 14.5px;
-  }
-
-  .stars {
-    font-size: 15px;
-  }
-
-  .author {
-    font-size: 13px;
+  .review-card {
+    width: 260px;
+    height: 380px;
   }
 }
-
 
 @media (max-width: 769px) {
+  .reviews-section {
+    padding: 80px 0 40px;
+    background: #ffffff;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    perspective: none;
+    overflow: hidden;
+  }
+
+  .reviews-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding: 0 25px;
+    text-align: center;
+    width: 100%;
+    line-height: 1.3;
+  }
+
+  .reviews-cards {
+    height: 550px;
+    /* Force height to contain tilted cards */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0px;
+    /* Negative margin handled by cards for overlap */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 40px 15vw 120px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .reviews-cards::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+  }
+
   .review-card {
-    height: 190px;
+    width: 78vw;
+    height: 400px;
+    position: relative;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    filter: grayscale(0) brightness(1);
+    border-radius: 15px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
+    margin: 0 -10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Maintain the Arc in horizontal scroll */
+  .rotate-1 {
+    transform: rotate(-6deg) translateY(20px);
+  }
+
+  .rotate-2 {
+    transform: rotate(-3deg) translateY(5px);
+  }
+
+  .rotate-3 {
+    transform: rotate(0deg) translateY(-5px);
+  }
+
+  .rotate-4 {
+    transform: rotate(3deg) translateY(5px);
+  }
+
+  .rotate-5 {
+    transform: rotate(6deg) translateY(20px);
+  }
+
+  .review-info {
+    opacity: 1;
+    transform: translateY(0);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
+    padding: 25px 20px;
+    backdrop-filter: blur(10px);
   }
 
   .review-info p {
-    font-size: 8px;
+    font-size: 15px;
+    margin-bottom: 15px;
   }
 }
+
+/* Old mobile query removed to prevent conflict */
+
+
+
+
 
 
 

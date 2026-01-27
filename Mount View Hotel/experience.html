@@ -50,8 +50,8 @@
     <div class="oasis-text">
       <h2>Step into our oasis</h2>
       <p>
-        Mount View hotel creates an escape from the hustle <br />
-        of the city. Come in, Disconnect
+        Mount View hotel creates an escape from the hustleof the city. <br>
+        Come in, Disconnect
       </p>
 
       <a href="rooms.html" class="oasis-btn">Book Now</a>
@@ -134,58 +134,7 @@
     </div>
   </section>
 
-  <section class="explore-section">
-    <div class="explore-text">
-      <h2>Explore Panchgani</h2>
-      <p>
-        Mount View’s strategic location makes it
-        <br />
-        easy to visit all local wonders and viewpoints.
-      </p>
-    </div>
 
-    <div class="explore-images">
-      <!-- IMAGE 1 — always visible -->
-      <div class="explore-card show" style="z-index: 4">
-        <img src="images/ex15.png" alt="Viewpoints" />
-      </div>
-
-      <!-- IMAGE 2 — scroll reveal -->
-      <div class="explore-card scroll-img" style="z-index: 3">
-        <img src="images/ex17.png" alt="Gardens" />
-      </div>
-
-      <!-- IMAGE 3 — scroll reveal -->
-      <div class="explore-card scroll-img" style="z-index: 2">
-        <img src="images/ex16.png" alt="Galleries" />
-      </div>
-
-      <!-- IMAGE 4 — scroll reveal -->
-      <div class="explore-card scroll-img" style="z-index: 1">
-        <img src="images/ex18.png" alt="Adventure sports" />
-      </div>
-    </div>
-  </section>
-
-  <script>
-    const scrollCards = document.querySelectorAll(".scroll-img");
-
-    function revealOnScroll() {
-      scrollCards.forEach((card, index) => {
-        const position = card.getBoundingClientRect().top;
-        const screenHeight = window.innerHeight;
-
-        if (position < screenHeight - 100) {
-          setTimeout(() => {
-            card.classList.add("show");
-          }, index * 150); // stagger animation
-        }
-      });
-    }
-
-    window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll(); // Run on load
-  </script>
 
 
   <section class="spotlight-section">
@@ -212,27 +161,18 @@
       <h3 class="trending-title">Trending</h3>
 
       <div class="trending-item">
-        <img src="images/ex7.png" class="trend-img" />
+        <img src="images/ev10.png" class="trend-img" />
         <p class="trend-text">
-          The Art of Doing Nothing: Slow Travel in the Hills
+          Heritage stays of Panchgani
         </p>
       </div>
 
       <div class="divider"></div>
 
       <div class="trending-item">
-        <img src="images/ex8.png" class="trend-img" />
+        <img src="images/hom1.png" class="trend-img" />
         <p class="trend-text">
-          Table Land at Sunset: Panchgani’s Crown Jewel
-        </p>
-      </div>
-
-      <div class="divider"></div>
-
-      <div class="trending-item">
-        <img src="images/ex9.png" class="trend-img" />
-        <p class="trend-text">
-          Devrai Art Village: Where Nature Inspires Craft
+          Old Bungalows of Panchgani
         </p>
       </div>
     </div>
