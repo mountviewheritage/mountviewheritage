@@ -134,6 +134,8 @@ video::-webkit-media-controls-play-button {
     width: 96%;
     margin-left: auto;
     margin-right: auto;
+    overflow-x: auto;
+    scroll-behavior: smooth;
 }
 
 /* INITIAL IMAGE STATE (ANIMATION START) */
@@ -153,11 +155,11 @@ video::-webkit-media-controls-play-button {
 }
 
 .oasis-img:nth-child(2) {
-    height: 380px;
+    height: 360px;
 }
 
 .oasis-img:nth-child(3) {
-    height: 500px;
+    height: 380px;
 }
 
 .oasis-img:nth-child(4) {
@@ -165,7 +167,7 @@ video::-webkit-media-controls-play-button {
 }
 
 .oasis-img:nth-child(5) {
-    height: 420px;
+    height: 400px;
 }
 
 /* WHEN VISIBLE */
@@ -225,9 +227,10 @@ video::-webkit-media-controls-play-button {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top,
-            rgba(255, 255, 255, 0) 70%,
-            rgba(255, 255, 255, 0.8) 90%);
+    background: linear-gradient(to bottom,
+            #ffffff 0%,
+            rgba(255, 255, 255, 0.6) 20%,
+            transparent 50%);
 }
 
 /* BLUR GLASS CARD IN CENTER */
@@ -567,82 +570,109 @@ video::-webkit-media-controls-play-button {
 
 
 /* EXPLORE SECTION */
+/* EXPLORE SECTION */
 .explore-section {
     width: 100%;
-    padding: 0px 0;
-    /* top-bottom only */
-    background: #ffffff;
+    background: #fdfaf6;
+    /* Light beige bg */
+    padding: 100px 0;
+    font-family: "Georgia", serif;
 }
 
-/* LEFT-ALIGNED TEXT */
-.explore-text {
-    width: 100%;
+.explore-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     max-width: 1200px;
-    margin: 70px 115px;
-    text-align: left;
-    /* ← left align */
+    margin: 0 auto;
+    padding: 0 40px;
+    gap: 60px;
 }
 
-.explore-text h2 {
-    font-size: 35px;
-    font-family: Georgia, serif;
-    margin-bottom: 20px;
-    font-weight: lighter;
-}
-
-.explore-text p {
-    font-size: 16px;
-    font-family: Georgia, serif;
-    color: #333;
-}
-
-/* FULL WIDTH IMAGE GRID – NO SIDE SPACE */
-.explore-images {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0px;
-    /* NO space between images */
-    padding: 0;
-    /* IMPORTANT: remove side padding */
+/* LEFT TEXT */
+.explore-text {
+    flex: 0 0 40%;
     margin: 0;
 }
 
-/* EACH CARD */
-.explore-card {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+.explore-text h2 {
+    font-size: 38px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 24px;
 }
 
-/* IMAGES FULL WIDTH – TOUCH BOTH EDGES */
-.explore-card img {
+.explore-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 400px;
+}
+
+/* RIGHT IMAGE */
+.explore-image-wrapper {
+    flex: 1;
+    position: relative;
+    border: 8px solid #ffffff;
+    /* White frame */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.explore-img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* LABEL TEXT INSIDE IMAGE */
-.img-label {
+/* PIN OVERLAY */
+.explore-pin {
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    width: 44px;
+    height: 44px;
+    background: #4a3b32;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.explore-pin span {
+    transform: rotate(45deg);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* CAPTION inside image */
+.explore-caption {
     position: absolute;
     bottom: 20px;
-    left: 20px;
-    color: white;
-    font-size: 20px;
-    font-family: Georgia, serif;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    right: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-family: inherit;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* SCROLL ANIMATION */
-.scroll-img {
-    opacity: 0;
-    transform: translateY(100px);
-    transition: all 0.8s ease-out;
-}
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .explore-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
 
-.scroll-img.show {
-    opacity: 1;
-    transform: translateY(0);
+    .explore-text {
+        max-width: 100%;
+    }
+
+    .explore-text p {
+        margin: 0 auto;
+    }
 }
 
 

@@ -28,9 +28,11 @@ const sliderData = [
 ];
 
 function updateSlider() {
-    
-    document.getElementById("slideDesc").innerHTML = sliderData[sliderIndex].desc;
-    
+    const slideDescElement = document.getElementById("slideDesc");
+    if (slideDescElement) {
+        slideDescElement.innerHTML = sliderData[sliderIndex].desc;
+    }
+
 
     let slides = document.querySelectorAll(".slide");
     let dots = document.querySelectorAll(".dot");

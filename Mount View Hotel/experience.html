@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/experience.css" />
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/bottom-bar.css" />
 </head>
 
 <body>
@@ -19,16 +20,16 @@
 
   <section class="experience-hero">
     <div class="video-wrapper">
-      <video id="experienceVideo" class="experience-video" playsinline>
+      <video id="experienceVideo" class="experience-video" playsinline autoplay muted>
         <source src="videos/vatsara_006.mov" type="video/mp4" />
       </video>
 
       <!-- Custom Play Button -->
-      <div id="playButton" class="play-btn">
+      <!-- <div id="playButton" class="play-btn">
         <svg viewBox="0 0 200 200">
           <polygon points="70,55 70,145 145,100" fill="rgba(255,255,255,0.5)" stroke="black" stroke-width="0.5" />
         </svg>
-      </div>
+      </div> -->
     </div>
   </section>
 
@@ -134,7 +135,27 @@
     </div>
   </section>
 
+  <section class="explore-section">
+    <div class="explore-container">
+      <!-- LEFT TEXT -->
+      <div class="explore-text">
+        <h2>Explore Panchgani</h2>
+        <p>
+          Mount View’s strategic location makes it easy to visit all
+          local wonders and viewpoints
+        </p>
+      </div>
 
+      <!-- RIGHT IMAGE -->
+      <div class="explore-image-wrapper">
+        <img src="images/ex7.png" alt="Paragliding" class="explore-img" />
+
+
+
+        <div class="explore-caption">Adventure sports</div>
+      </div>
+    </div>
+  </section>
 
 
   <section class="spotlight-section">
@@ -180,6 +201,9 @@
 
   <div id="footer-container"></div>
   <script src="js/include-footer.js"></script>
+
+  <div id="bottom-bar"></div>
+  <script src="js/include-bottom-bar.js"></script>
 
   <script src="js/slider.js"></script>
   <script src="js/menu.js"></script>

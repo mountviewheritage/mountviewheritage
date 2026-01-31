@@ -583,20 +583,70 @@
 
 /* ---- COLLAGE WRAPPER ---- */
 
+/* ---- SCROLL WRAPPER ---- */
+
+/* ---- SCROLL WRAPPER (VIEWPORT) ---- */
 .collage-wrapper {
   position: relative;
-  width: 90%;
-  max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
-  height: 800px;
-  /* Base height for desktop */
+  height: auto;
+  overflow: hidden;
+  /* Hide scrollbars & overflow */
+  padding: 40px 0;
+}
+
+.collage-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---- TRACK (MOVES) ---- */
+.collage-track {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 30px;
+  width: max-content;
+  /* Fit content to enable scrolling */
+  animation: collageScroll 25s linear infinite;
+
+  /* Hardware acceleration to stop flicker */
+  will-change: transform;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Pause on hover */
+.collage-wrapper:hover .collage-track {
+  animation-play-state: paused;
+}
+
+/* KEYFRAME ANIMATION */
+@keyframes collageScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-50%, 0, 0);
+    /* Move half way (since we duplicated items) */
+  }
 }
 
 .collage-item {
-  position: absolute;
+  position: relative;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.3s ease;
+  flex: 0 0 auto;
+  border-radius: 4px;
+  /* standard radius */
+
+  /* Anti-flicker for children */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .collage-item img {
@@ -608,94 +658,40 @@
 
 .collage-item:hover {
   transform: scale(1.02);
-  z-index: 20 !important;
+  z-index: 20;
 }
 
-/* Staggered Positions based on the reference image */
+/* Variable widths/heights for the "Collage" feel, but in a line */
 
 .item-1 {
-  width: 28%;
+  width: 320px;
   height: 400px;
-  left: 0;
-  top: 0;
-  z-index: 1;
 }
 
 .item-2 {
-  width: 48%;
+  width: 380px;
   height: 480px;
-  left: 17%;
-  top: 280px;
-  z-index: 10;
-  /* Most forward in center-bottom */
 }
 
 .item-3 {
-  width: 25%;
+  width: 300px;
   height: 520px;
-  left: 58%;
-  top: 40px;
-  z-index: 2;
 }
 
 .item-4 {
-  width: 38%;
+  width: 360px;
   height: 380px;
-  right: 0;
-  top: 420px;
-  z-index: 1;
 }
 
 /* ================= RESPONSIVE ================= */
 
 /* ================= RESPONSIVE ================= */
 
-@media (max-width: 1200px) {
-  .collage-wrapper {
-    height: 700px;
-  }
-
-  .item-2 {
-    top: 250px;
-  }
-
-  .item-4 {
-    top: 380px;
-  }
-}
-
-@media (max-width: 992px) {
-  .collage-wrapper {
-    height: 550px;
-  }
-
-  .gallery-subtitle {
-    width: 80%;
-  }
-
-  .item-1 {
-    height: 280px;
-  }
-
-  .item-2 {
-    height: 340px;
-    top: 180px;
-  }
-
-  .item-3 {
-    height: 360px;
-    top: 30px;
-  }
-
-  .item-4 {
-    height: 260px;
-    top: 280px;
-  }
-}
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
   .picture-gallery-container {
-    padding: 60px 10px 80px;
+    padding: 60px 0 80px;
   }
 
   .gallery-title {
@@ -709,70 +705,29 @@
   }
 
   .collage-wrapper {
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  /* Smaller fixed sizes for mobile scrolling */
+  .item-1 {
+    width: 240px;
+    height: 300px;
+  }
+
+  .item-2 {
+    width: 280px;
+    height: 360px;
+  }
+
+  .item-3 {
+    width: 220px;
     height: 380px;
-    width: 90%;
-  }
-
-  .collage-item {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Maintaining the overlapping look on mobile - smaller sizes */
-  .item-1 {
-    width: 32%;
-    height: 180px;
-    left: 0;
-    top: 0;
-  }
-
-  .item-2 {
-    width: 52%;
-    height: 220px;
-    left: 10%;
-    top: 140px;
-  }
-
-  .item-3 {
-    width: 32%;
-    height: 240px;
-    left: 55%;
-    top: 20px;
   }
 
   .item-4 {
-    width: 42%;
-    height: 180px;
-    right: 0;
-    top: 200px;
-  }
-}
-
-@media (max-width: 480px) {
-  .collage-wrapper {
+    width: 260px;
     height: 280px;
-  }
-
-  .item-1 {
-    height: 130px;
-    width: 30%;
-  }
-
-  .item-2 {
-    height: 160px;
-    width: 50%;
-    top: 110px;
-  }
-
-  .item-3 {
-    height: 180px;
-    width: 30%;
-    top: 15px;
-  }
-
-  .item-4 {
-    height: 130px;
-    width: 40%;
-    top: 140px;
   }
 }
 
