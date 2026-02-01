@@ -179,7 +179,6 @@
 /* ----- RIGHT SIDE SLIDER ------ */
 
 .event-slider-right {
-  width: 55%;
   overflow: hidden;
   position: relative;
 }
@@ -796,7 +795,7 @@
 
   /* RIGHT IMAGE */
   .event-slider-right {
-    width: 52%;
+    width: 100%;
   }
 
   .slide {

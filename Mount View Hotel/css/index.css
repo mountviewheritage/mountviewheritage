@@ -168,6 +168,7 @@ body.opener-active {
   transition: 0.3s ease;
 }
 
+
 .hero-btn:hover {
   transform: scale(1.05);
 }
@@ -428,7 +429,7 @@ img[data-hover] {
 
 @media (max-width: 769px) {
   .cta-section {
-    padding: 70px 20px;
+    padding: 70px 0px;
   }
 
   .cta-container {
@@ -575,35 +576,51 @@ img[data-hover] {
 /* ================= PIN POSITIONS (MOVED UP) ================= */
 /* Reference ke hisaab se upar kiya */
 
+/* ================= PIN POSITIONS (Percentage-based for responsiveness) ================= */
+
 .pin-1 {
-  top: 8%;
-  left: 40%;
-  position: absolute;
+  top: 9.2%;
+  left: 51.5%;
 }
 
 .pin-2 {
-  top: 7%;
-  left: 58%;
+  top: 7.8%;
+  left: 59.9%;
 }
 
 .pin-3 {
-  top: 26%;
-  left: 10%;
+  top: 30.5%;
+  left: 12%;
 }
 
 .pin-4 {
-  top: 21.6%;
-  left: 30%;
+  top: 9.6%;
+  left: 39.5%;
 }
 
 .pin-5 {
-  top: 34.2%;
-  left: 50%;
+  top: 9.6%;
+  left: 92.5%;
 }
 
 .pin-6 {
-  top: 24%;
-  left: 73%;
+  top: 12.5%;
+  left: 6%;
+}
+
+.pin-7 {
+  top: 24.2%;
+  left: 33.2%;
+}
+
+.pin-8 {
+  top: 40%;
+  left: 50.2%;
+}
+
+.pin-9 {
+  top: 8.8%;
+  left: 71%;
 }
 
 .pin-im {
@@ -762,6 +779,51 @@ img[data-hover] {
   .pin-line {
     height: 24px;
   }
+
+  .pin-1 {
+  top: 9.7%;
+  left: 51.5%;
+}
+
+.pin-2 {
+  top: 8%;
+  left: 60.9%;
+}
+
+.pin-3 {
+  top: 29.5%;
+  left: 12%;
+}
+
+.pin-4 {
+  top: 10.5%;
+  left: 39.5%;
+}
+
+.pin-5 {
+  top: 10.2%;
+  left: 92.5%;
+}
+
+.pin-6 {
+  top: 12.9%;
+  left: 6%;
+}
+
+.pin-7 {
+  top: 22.7%;
+  left: 33.2%;
+}
+
+.pin-8 {
+  top: 50%;
+  left: 34.2%;
+}
+
+.pin-9 {
+  top: 8.8%;
+  left: 71%;
+}
 }
 
 /* Tablet Portrait & Large Mobile (481px - 767px) */
@@ -831,35 +893,15 @@ img[data-hover] {
   }
 
   /* Adjust pin positions for tablet */
-  .pin-1 {
-    top: 10%;
-    left: 40%;
-  }
-
-  .pin-2 {
-    top: 9%;
-    left: 58%;
-  }
-
-  .pin-3 {
-    top: 20%;
-    left: 12%;
-  }
-
-  .pin-4 {
-    top: 23%;
-    left: 28%;
-  }
-
-  .pin-5 {
-    top: 30%;
-    left: 46%;
-  }
-
-  .pin-6 {
-    top: 22%;
-    left: 72%;
-  }
+  .pin-1 { top: 15%; left: 51.5%; }
+  .pin-2 { top: 14%; left: 59.9%; }
+  .pin-3 { top: 40%; left: 12%; }
+  .pin-4 { top: 18%; left: 39.5%; }
+  .pin-5 { top: 18%; left: 92.5%; }
+  .pin-6 { top: 22%; left: 6.0%; }
+  .pin-7 { top: 35%; left: 33.2%; }
+  .pin-8 { top: 50%; left: 50.2%; }
+  .pin-9 { top: 16%; left: 71.0%; }
 }
 
 /* Mobile (320px - 480px) */
@@ -895,8 +937,9 @@ img[data-hover] {
   }
 
   .hero-btn {
-    margin-top: auto;
     /* Push button to bottom */
+    position: absolute;
+    bottom: -200px;
     border: none;
     background-color: #8d4a34;
     /* Filled button */
@@ -982,35 +1025,15 @@ img[data-hover] {
   }
 
   /* Mobile pin positions */
-  .pin-1 {
-    top: 12%;
-    left: 38%;
-  }
-
-  .pin-2 {
-    top: 11%;
-    left: 56%;
-  }
-
-  .pin-3 {
-    top: 18%;
-    left: 10%;
-  }
-
-  .pin-4 {
-    top: 25%;
-    left: 24%;
-  }
-
-  .pin-5 {
-    top: 32%;
-    left: 44%;
-  }
-
-  .pin-6 {
-    top: 20%;
-    left: 70%;
-  }
+  .pin-1 { top: 10%; left: 51.5%; }
+  .pin-2 { top: 8.5%; left: 62.5%; }
+  .pin-3 { top: 30%; left: 8%; }
+  .pin-4 { top: 10.7%; left: 39.5%; }
+  .pin-5 { top: 10%; left: 92.5%; }
+  .pin-6 { top: 26.7%; left: 22%; }
+  .pin-7 { top: 42%; left: 47.2%; }
+  .pin-8 { top: 14.5%; left: 5.2%; }
+  .pin-9 { top: 9.2%; left: 73.0%; }
 }
 
 /* Extra Small Mobile (max 380px) */
@@ -1046,36 +1069,7 @@ img[data-hover] {
     height: 16px;
   }
 
-  /* Extra small mobile pin positions */
-  .pin-1 {
-    top: 14%;
-    left: 36%;
-  }
-
-  .pin-2 {
-    top: 13%;
-    left: 54%;
-  }
-
-  .pin-3 {
-    top: 16%;
-    left: 8%;
-  }
-
-  .pin-4 {
-    top: 26%;
-    left: 22%;
-  }
-
-  .pin-5 {
-    top: 34%;
-    left: 42%;
-  }
-
-  .pin-6 {
-    top: 18%;
-    left: 68%;
-  }
+  /* Extra small mobile pin positions inherited from mobile */
 }
 
 /* TABLET */
@@ -1166,53 +1160,14 @@ img[data-hover] {
   }
 
 
-
-  .pin-5 {
-    top: 24.2%;
-    left: 46%;
-  }
-
-  .pin-3 {
-    top: 5%;
-    left: 10%;
-  }
-
-  .pin-4 {
-    top: 21.6%;
-    left: 22%;
-  }
-
-  .pin-6 {
-    top: 15%;
-    left: 73%;
-  }
-
+  /* Pins inherited from 1024px or 480px query */
 }
 
 
 
 
 @media (max-width: 380px) {
-
-  .pin-5 {
-    top: 24.2%;
-    left: 46%;
-  }
-
-  .pin-3 {
-    top: 5%;
-    left: 10%;
-  }
-
-  .pin-4 {
-    top: 21.6%;
-    left: 22%;
-  }
-
-  .pin-6 {
-    top: 15%;
-    left: 73%;
-  }
+  /* Pins inherited from 480px query */
 }
 
 
