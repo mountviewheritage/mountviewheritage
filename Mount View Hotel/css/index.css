@@ -863,6 +863,50 @@ img[data-hover] {
 }
 
 /* Mobile (320px - 480px) */
+@media (max-width: 768px) {
+  .home-hero { 
+    background-image: url('../images/mobile-bg.png');
+    background-size: 100% auto;
+    background-position: center bottom 25%;
+    /* Raised image higher */
+    background-repeat: no-repeat;
+    align-items: flex-start;
+    padding-bottom: 30px;
+  }
+
+  .home-hero-inner {
+    color: #8d4a34;
+    /* Brown color to match screenshot */
+    display: flex;
+    flex-direction: column;
+    min-height: 85vh;
+    /* Ensure height to push button down */
+    width: 100%;
+  }
+
+  .home-hero h1 {
+    color: #8d4a34;
+    font-weight: 500;
+  }
+
+  .home-hero p {
+    color: #2d2d2d;
+    font-weight: 400;
+  }
+
+  .hero-btn {
+    margin-top: auto;
+    /* Push button to bottom */
+    border: none;
+    background-color: #8d4a34;
+    /* Filled button */
+    color: #ffffff;
+    align-self: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Enhance visibility */
+  }
+}
+
 @media (max-width: 480px) {
   .map-wrapper {
     height: 550px;
