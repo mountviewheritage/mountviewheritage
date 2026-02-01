@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Room Details - Mountview</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/rooms.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/bottom-bar.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- EXTRA CSS ONLY FOR FEATURES ICONS -->
+  <style>
+    .room-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 18px;
+      font-size: 13px;
+    }
+
+    .feature-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: #333;
+    }
+
+    .feature-item img {
+      width: 26px;
+      height: 26px;
+      object-fit: contain;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div id="navbar"></div>
+  <script src="js/menu.js"></script>
+  <script src="js/include-navbar.js"></script>
+
+  <!-- ROOM SECTION -->
+  <section class="room-hero">
+    <div class="room-bg" id="roomBg"></div>
+
+    <div class="room-card-box">
+      <h1 class="room-title" id="roomTitle">Deluxe Double Room</h1>
+
+      <p class="room-subtitle">ROOM DESCRIPTION</p>
+
+      <p class="room-desc" id="roomDesc">
+        Perfect for couples or solo travellers, our Double Room combines
+        heritage charm with modern comfort.
+      </p>
+
+      <!-- GALLERY -->
+      <div class="room-gallery">
+        <img id="g1" />
+        <img id="g2" />
+        <img id="g3" />
+      </div>
+
+      <p class="room-subtitle">FEATURES</p>
+
+      <!-- FEATURES -->
+      <div class="room-features" id="roomFeatures"></div>
+
+      <!-- FOOTER -->
+      <div class="room-footer">
+        <a href="#" class="call-link">Call for enquiry</a>
+        <span id="slideIndicator">1 / 5</span>
+        <a href="https://www.secure-booking-engine.com/accounts/C9lCVCV_MJMhuxNU9IHxhA/properties/CPD6_y1zvqAFM18PGj4Vgw/booking-engine/web/source/4wsctBw6Oq6j-g9XuxeRzQ/"
+          target="_blank" class="book-btn">Book Now</a>
+      </div>
+    </div>
+
+    <!-- ARROWS -->
+    <button class="nav prev" onclick="prevRoom()">‹</button>
+    <button class="nav next" onclick="nextRoom()">›</button>
+  </section>
+
+  <!-- SCRIPT -->
+  <script>
+    const slides = [
+      {
+        title: "Deluxe Double Room",
+        desc: "Ideal for couples or solo travelers, this cosy Panchgani hotel room offers perfect mix of comfort and style.",
+        bg: "images/room1.png",
+        imgs: [
+          "images/room2.png",
+          "images/room3.png",
+          "images/room4.png",
+          "images/rooma1.png",
+          "images/rooma2.png",
+          "images/rooma3.png",
+          "images/rooma4.png"
+
+        ],
+        features: [
+          { icon: "images/r1.png", text: "2 People" },
+          { icon: "images/r2.png", text: "1 Large Double Bed" },
+          { icon: "images/r5.png", text: "Private Balcony" },
+          { icon: "images/r4.png", text: "WiFi Internet" },
+          { icon: "images/r3.png", text: "Parking" },
+          { icon: "images/r6.png", text: "Air conditioning" },
+        ],
+      },
+
+      {
+        title: "Deluxe Triple Room",
+        desc: "A spacious and comfortable choice for a small family or group of friends. This accommodation in Panchgani provides ample space to relax and unwind.",
+        bg: "images/room5.png",
+        imgs: ["images/room6.png", "images/room7.png", "images/room8.png", "images/rooma5.png", "images/rooma6.png", "images/rooma7.png", "images/rooma8.png"],
+        features: [
+          { icon: "images/r1.png", text: "3 People" },
+          { icon: "images/r2.png", text: "1 Double + 1 SIngle Bed" },
+          { icon: "images/r5.png", text: "Tranquil Forest View" },
+          { icon: "images/r4.png", text: "WiFi Internet" },
+          { icon: "images/r3.png", text: "Parking" },
+          { icon: "images/r6.png", text: "Air conditioning" },
+        ],
+      },
+
+      {
+        title: "Deluxe Quadruple Room",
+        desc: "Perfect for small families, our Deluxe Quadruple room in Panchgani offers the convenience of separate beds within a spacious setting.",
+        bg: "images/r11.png",
+        imgs: ["images/room10.png", "images/room11.png", "images/room12.png", "images/rooma9.png"],
+        features: [
+          { icon: "images/r1.png", text: "4 People" },
+          { icon: "images/r2.png", text: "1 Double + 2 SIngle Bed" },
+          { icon: "images/r5.png", text: "Private Forest" },
+          { icon: "images/r4.png", text: "WiFi Internet" },
+          { icon: "images/r3.png", text: "Parking" },
+          { icon: "images/r6.png", text: "Air conditioning" },
+        ],
+      },
+
+      {
+        title: "Deluxe Family Room",
+        desc: "Our largest accommodation, the Family Room in Panchgani, is designed to host larger families, ensuring everyone stays together comfortably.",
+        bg: "images/room13.png",
+        imgs: ["images/room14.png", "images/room15.png", "images/room16.png", "images/rooma10.png", "images/rooma11.png", "images/rooma12.png"],
+        features: [
+          { icon: "images/r1.png", text: "2 People" },
+          { icon: "images/r2.png", text: "Double Bed" },
+          { icon: "images/r5.png", text: "Forest View" },
+          { icon: "images/r4.png", text: "WiFi Internet" },
+          { icon: "images/r3.png", text: "Parking" },
+          { icon: "images/r6.png", text: "Air conditioning" },
+        ],
+      },
+    ];
+
+    let index = 0;
+
+    const bg = document.getElementById("roomBg");
+    const g1 = document.getElementById("g1");
+    const g2 = document.getElementById("g2");
+    const g3 = document.getElementById("g3");
+    const indicator = document.getElementById("slideIndicator");
+    const roomTitle = document.getElementById("roomTitle");
+    const roomDesc = document.getElementById("roomDesc");
+    const roomFeatures = document.getElementById("roomFeatures");
+
+    function updateSlide() {
+      const current = slides[index];
+
+      // 1️⃣ fade out background
+      bg.classList.add("fade-out");
+
+      setTimeout(() => {
+        // 2️⃣ image change
+        bg.style.backgroundImage = `url(${current.bg})`;
+
+        g1.src = current.imgs[0];
+        g2.src = current.imgs[1];
+        g3.src = current.imgs[2];
+
+        roomTitle.textContent = current.title;
+        roomDesc.textContent = current.desc;
+        indicator.textContent = `${index + 1} / ${slides.length}`;
+
+        roomFeatures.innerHTML = "";
+        current.features.forEach((feature) => {
+          const div = document.createElement("div");
+          div.className = "feature-item";
+          div.innerHTML = `
+        <img src="${feature.icon}" alt="">
+        <span>${feature.text}</span>
+      `;
+          roomFeatures.appendChild(div);
+        });
+
+        // 3️⃣ fade in
+        bg.classList.remove("fade-out");
+
+        bindGalleryClicks();
+      }, 300);
+    }
+
+    function nextRoom() {
+      index = (index + 1) % slides.length;
+      updateSlide();
+    }
+
+    function prevRoom() {
+      index = (index - 1 + slides.length) % slides.length;
+      updateSlide();
+    }
+
+    updateSlide();
+  </script>
+
+  <script>
+    let galleryImages = [];
+    let currentImgIndex = 0;
+
+    // attach click on room gallery images
+    function bindGalleryClicks() {
+      [g1, g2, g3].forEach((img, idx) => {
+        img.onclick = () => {
+          galleryImages = slides[index].imgs; // 🔥 popup ke liye ALL images
+          openGallery(idx); // jis image pe click hua
+        };
+      });
+    }
+
+    function openGallery(i) {
+      currentImgIndex = i;
+      document.getElementById("modalImage").src = galleryImages[i];
+      document.getElementById("imageModal").classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeGallery() {
+      document.getElementById("imageModal").classList.remove("active");
+      document.body.style.overflow = "";
+    }
+
+    function nextImage() {
+      currentImgIndex = (currentImgIndex + 1) % galleryImages.length;
+      document.getElementById("modalImage").src =
+        galleryImages[currentImgIndex];
+    }
+
+    function prevImage() {
+      currentImgIndex =
+        (currentImgIndex - 1 + galleryImages.length) % galleryImages.length;
+      document.getElementById("modalImage").src =
+        galleryImages[currentImgIndex];
+    }
+  </script>
+
+  <!-- IMAGE POPUP GALLERY -->
+  <div id="imageModal" class="image-modal">
+    <span class="close-modal" onclick="closeGallery()">×</span>
+
+    <button class="modal-nav prev" onclick="prevImage()">‹</button>
+
+    <img id="modalImage" />
+
+    <button class="modal-nav next" onclick="nextImage()">›</button>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer-container"></div>
+  <script src="js/include-footer.js"></script>
+
+  <div id="bottom-bar"></div>
+  <script src="js/include-bottom-bar.js"></script>
+
+  <!-- GSAP for scroll reveal if you want -->
+
+</body>
+
+</html>

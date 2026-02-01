@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events - Mountview</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/bottom-bar.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- OPENER (TOP MOST) -->
+  <div id="opener">
+    <div class="opener-inner">
+      <!-- YAHAN tu apni image / video dalega -->
+      <img src="images/opener.png" class="opener-desktop" alt="Opener" />
+      <img src="images/opener-mobile.png" class="opener-mobile" alt="Opener" />
+      <!-- ya -->
+      <!-- <video autoplay muted loop playsinline src="opener.mp4"></video> -->
+    </div>
+  </div>
+
+  <div id="navbar"></div>
+  <script src="js/menu.js"></script>
+  <script src="js/include-navbar.js"></script>
+
+  <section class="home-hero">
+    <div class="home-hero-inner">
+      <!-- Desktop illustration only -->
+      <img src="images/final-logo.png" alt="Mountview Illustration" class="hero-illustration" />
+
+      <h1>Welcome to your home amidst nature.</h1>
+
+      <p>
+        Located at an altitude of 4,200 ft, right in the heart of Panchgani,
+        our hotel provides the ideal base to relax and explore the mesmerizing
+        beauty of this renowned hill station.
+      </p>
+
+      <a href="rooms.html" class="hero-btn">Check Availability</a>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-container">
+      <img src="images/mob-home-1.png" alt="Illustration" class="cta-illustration" />
+
+
+      <!-- EXPLORE ROOMS SECTION (MOVED INSIDE CTA) -->
+      <section class="rooms-section">
+        <h2 class="rooms-title">Explore our rooms</h2>
+
+        <!-- DESKTOP GRID -->
+        <div class="rooms-grid">
+          <a href="rooms.html" class="room-card reveal">
+            <div class="room-img">
+              <img src="images/hom1.png" data-hover="images/hom1.png" />
+
+              <div class="room-info">
+                <h3>Double Deluxe Room</h3>
+                <div class="room-features">
+                  <div class="feature">
+                    <img src="images/homi1.png" alt="" />
+                    <span>2 People</span>
+                  </div>
+
+                  <div class="feature">
+                    <img src="images/homi2.png" alt="" />
+                    <span>1 Large<br />Double Bed</span>
+                  </div>
+
+                  <div class="feature">
+                    <img src="images/homi3.png" alt="" />
+                    <span>Private<br />Balcony</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- COPY SAME CARD 3 MORE TIMES -->
+          <a href="rooms.html" class="room-card reveal">
+            <div class="room-img">
+              <img src="images/hom2.png" data-hover="images/hom2.png" />
+
+              <div class="room-info">
+                <h3>Triple Deluxe Room</h3>
+                <div class="room-features">
+                  <div class="feature">
+                    <img src="images/homi1.png" alt="" />
+                    <span>3 People</span>
+                  </div>
+
+                  <div class="feature">
+                    <img src="images/homi2.png" alt="" />
+                    <span>1 Double<br />+ 1 Single Bed</span>
+                  </div>
+
+                  <div class="feature">
+                    <img src="images/homi3.png" alt="" />
+                    <span>Tranquil<br />Garden View</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="rooms.html" class="room-card reveal">
+            <div class="room-img">
+              <img src="images/hom3.png" data-hover="images/hom3.png" />
+
+              <div class="room-info">
+                <h3>Deluxe Quadruple Room</h3>
+                <div class="room-features">
+                  <div class="feature">
+                    <img src="images/homi1.png" alt="" />
+                    <span>Accommodates<br />2 People</span>
+                  </div>
+
+                  <div class="feature">
+                    <img src="images/homi2.png" alt="" />
+                    <span>1 Double<br />+ 2 Single Bed</span>
+                  </div>
+
+                  <div class="feature">
+                    <img src="images/homi3.png" alt="" />
+                    <span>Private<br />Balcony</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="rooms.html" class="room-card reveal">
+            <div class="room-img">
+              <img src="images/hom4.png" data-hover="images/hom4.png" />
+
+              <div class="room-info">
+                <h3>Deluxe Family Room</h3>
+                <div class="room-features">
+                  <div class="feature">
+                    <img src="images/homi1.png" alt="" />
+                    <span>6 people</span>
+                  </div>
+
+                  <div class="feature">
+                    <img src="images/homi2.png" alt="" />
+                    <span>2 Double<br />+ 2 Single Bed</span>
+                  </div>
+
+                  <div class="feature">
+                    <img src="images/homi3.png" alt="" />
+                    <span>Expansive<br />Garden View</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- MOBILE SWIPER -->
+        <div class="swiper rooms-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="rooms.html" class="room-card">
+                <div class="room-img">
+                  <img src="images/hom1.png" />
+                </div>
+                <div class="room-info">
+                  <h3>Double Deluxe Room</h3>
+                  <ul>
+                    <li>2 people</li>
+                    <li>1 Large Double Bed</li>
+                    <li>Private Balcony</li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+
+            <!-- Duplicate slides -->
+            <div class="swiper-slide">
+              <a href="rooms.html" class="room-card">
+                <div class="room-img">
+                  <img src="images/hom2.png" />
+                </div>
+                <div class="room-info">
+                  <h3>Triple Deluxe Room</h3>
+                  <ul>
+                    <li>3 people</li>
+                    <li>1 Double + 1 Single Bed</li>
+                    <li>Tranquil garden view</li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="rooms.html" class="room-card">
+                <div class="room-img">
+                  <img src="images/hom3.png" />
+                </div>
+                <div class="room-info">
+                  <h3>Deluxe Quadruple Room</h3>
+                  <ul>
+                    <li>Accommodates 2 people</li>
+                    <li>1 Double + 2 Single Bed</li>
+                    <li>Private Balcony</li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="rooms.html" class="room-card">
+                <div class="room-img">
+                  <img src="images/hom4.png" />
+                </div>
+                <div class="room-info">
+                  <h3>Deluxe Family Room</h3>
+                  <ul>
+                    <li>6 people</li>
+                    <li>2 Double + 2 Single Bed</li>
+                    <li>Expansive Garden View</li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      if (window.innerWidth > 768) {
+        const cards = document.querySelectorAll(".room-card.reveal");
+        let hasAnimated = false;
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting && !hasAnimated) {
+                hasAnimated = true;
+
+                cards.forEach((card, index) => {
+                  setTimeout(() => {
+                    card.classList.add("show");
+                  }, index * 250); // 🔥 delay control
+                });
+
+                observer.disconnect(); // 🔒 ek baar hi chale
+              }
+            });
+          },
+          {
+            threshold: 0.5, // 🔥 section ka 30% dikhe tab
+          }
+        );
+
+        observer.observe(document.querySelector(".rooms-section"));
+      }
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+      if (window.innerWidth <= 768) {
+        new Swiper(".rooms-swiper", {
+          slidesPerView: "auto", // ⭐ sabse important
+          spaceBetween: 20,
+          freeMode: {
+            enabled: true,
+            momentum: true,
+            momentumBounce: false,
+          },
+          grabCursor: true,
+          resistanceRatio: 0.85,
+          watchOverflow: true,
+        });
+      }
+    </script>
+
+    <script>
+      document.querySelectorAll(".room-img img").forEach((img) => {
+        const original = img.src;
+        const hover = img.getAttribute("data-hover");
+
+        if (hover) {
+          img.addEventListener("mouseenter", () => {
+            img.src = hover;
+          });
+
+          img.addEventListener("mouseleave", () => {
+            img.src = original;
+          });
+        }
+      });
+    </script>
+    <section class="weekend-cta">
+      <div class="cta-inner">
+        <h2>Spend a weekend with us</h2>
+        <p>
+          Experience Panchgani like never before. Stay at the historic Mount
+          View Heritage Hotel and uncover a weekend of adventure, beauty, and
+          timeless charm.
+        </p>
+        <a href="rooms.html" class="cta-btn">Book Now</a>
+      </div>
+    </section>
+    <section class="map-section">
+      <div class="map-wrapper">
+        <!-- PIN 1 -->
+        <div class="pin pin-1 pin-black" data-title="Mountview Heritage"
+          data-desc="The serene point to start your outgoing adventures and the perfect place to come back to after your hectic day."
+          data-map=" https://maps.app.goo.gl/jZfp9JwKT3qQ2ymX8">
+          <span class="pin-icon"><img src="images/pi3.png" alt="pin" class="pin-im" /></span>
+          <span class="pin-line"></span>
+          <span class="pin-dot"></span>
+        </div>
+
+        <!-- PIN 2 -->
+        <div class="pin pin-2 pin-olive" data-title="Panchgani Market"
+          data-desc="Take a morning stroll through Panchgani bazaar, taste fresh strawberries, pick up local jam, see the town wake up"
+          data-map=" https://maps.app.goo.gl/bEpkujg3vin8XeCp6">
+          <span class="pin-icon"><img src="images/pi2.png" alt="pin" class="pin-im" /></span>
+          <span class="pin-line"></span>
+          <span class="pin-dot"></span>
+        </div>
+
+        <!-- PIN 3 -->
+        <div class="pin pin-3 pin-white" data-title="Panchgani Paragliding"
+          data-desc="Soar above the lush Sahyadris with Panchgani Paragliding — an unforgettable flight over valleys, tableland cliffs, and endless green horizons."
+          data-map=" https://maps.app.goo.gl/7uRf9HzCkoWGVpcr8">
+          <span class="pin-icon"><img src="images/pi5.png" alt="pin" class="pin-im" /></span>
+          <span class="pin-line"></span>
+          <span class="pin-dot"></span>
+        </div>
+
+        <div class="pin pin-4 pin-red" data-title="Devrai Art Village"
+          data-desc="Discover Devrai Art Village, where local artisans blend nature and craft, creating unique metal and stone artworks inspired by the forests of Panchgani."
+          data-map=" https://maps.app.goo.gl/7uRf9HzCkoWGVpcr8">
+          <span class="pin-icon"><img src="images/pi4.png" alt="pin" class="pin-im" /></span>
+          <span class="pin-line"></span>
+          <span class="pin-dot"></span>
+        </div>
+
+        <div class="pin pin-5 pin-olive" data-title="Mapro Gardens"
+          data-desc="Explore strawberry fields with picking, delicious treats, scenic views and other activities"
+          data-map=" https://maps.app.goo.gl/7uRf9HzCkoWGVpcr8">
+          <span class="pin-icon"><img src="images/pi5.png" alt="pin" class="pin-im" /></span>
+          <span class="pin-line"></span>
+          <span class="pin-dot"></span>
+        </div>
+
+        <div class="pin pin-6 pin-red" data-title="Parsi Point"
+          data-desc="Popular scenic point with views of the Krishna Valley & Dhom Dam, plus a play area & food vendors."
+          data-map=" https://maps.app.goo.gl/7uRf9HzCkoWGVpcr8">
+          <span class="pin-icon"><img src="images/pi6.png" alt="pin" class="pin-im" /></span>
+          <span class="pin-line"></span>
+          <span class="pin-dot"></span>
+        </div>
+
+        <!-- INFO BOX -->
+        <div class="info-slider">
+          <div class="info-box">
+            <div class="info-header">
+              <h3 id="info-title">MountView Heritage</h3>
+              <a href="https://maps.app.goo.gl/7uRf9HzCkoWGVpcr8" id="info-link" class="map-link">Show on Map</a>
+            </div>
+
+            <p id="info-desc" class="info-desc">
+              The centre point to all your upcoming adventures and the perfect
+              place to come back to after your hectic day.
+            </p>
+
+            <p class="info-hint">Click on a pin to explore the map!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="event-slider-section">
+      <div class="event-slider-container">
+        <!-- LEFT CONTENT (Changes per slide) -->
+        <div class="event-slider-left">
+          <p class="label" id="slideLabel">ELEVATION</p>
+
+          <p class="desc" id="slideDesc">
+            Wake up above the clouds, where the sun paints the sky in seven
+            hues.
+          </p>
+
+          <!-- Slider Navigation -->
+          <div class="slider-controls">
+            <span class="arrow left" onclick="prevSlide()">&#8592;</span>
+
+            <div class="dots">
+              <span class="dot active" onclick="goToSlide(0)"></span>
+              <span class="dot" onclick="goToSlide(1)"></span>
+              <span class="dot" onclick="goToSlide(2)"></span>
+              <span class="dot" onclick="goToSlide(3)"></span>
+            </div>
+
+            <span class="arrow right" onclick="nextSlide()">&#8594;</span>
+          </div>
+        </div>
+
+        <!-- RIGHT SLIDER IMAGES -->
+        <div class="event-slider-right">
+          <!-- SLIDE IMAGES (Replace src with your own images) -->
+          <img class="slide active" src="images/hom5.png" alt="" />
+          <!-- add image 1 here -->
+          <img class="slide" src="images/hom6.png" alt="" />
+          <!-- add image 2 here -->
+          <img class="slide" src="images/hom7.png" alt="" />
+          <!-- add image 3 here -->
+          <img class="slide" src="images/hom8.png" alt="" />
+          <!-- add image 3 here -->
+        </div>
+      </div>
+    </section>
+
+    <section class="amenities-section">
+      <h2 class="amenities-title">Your Day, Our Venue</h2>
+      <p class="amenities-subtitle">
+        Celebrate your special day at Mount View where every moment is
+        crafted to make your occasion truly unforgettable.
+      </p>
+
+      <a href="rooms.html" class="cta-btn">Book Now</a>
+
+      <div class="amenities-grid">
+        <!-- CARD 1 -->
+        <div class="amenity-card">
+          <img src="images/card3.png" alt="" />
+          <div class="amenity-overlay">
+            <p>Serene Views</p>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="amenity-card">
+          <img src="images/card1.png" alt="" />
+          <div class="amenity-overlay">
+            <p>Open Dining</p>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="amenity-card">
+          <img src="images/card2.png" alt="" />
+          <div class="amenity-overlay">
+            <p>Cozy rooms</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews-section">
+      <h2 class="reviews-title">See what our residents have to say</h2>
+
+      <div class="reviews-cards">
+        <div class="review-card rotate-1">
+          <img src="images/5.jpeg" alt="" />
+          <div class="review-info">
+            <p>“It’s unbelievably peaceful up here! No noise, no rush”</p>
+            <div class="stars">★★★★★</div>
+            <span class="author">~ Arihant</span>
+          </div>
+        </div>
+
+        <div class="review-card rotate-2">
+          <img src="images/2.jpeg" alt="" />
+          <div class="review-info">
+            <p>“Perfect place to disconnect and reconnect with nature.”</p>
+            <div class="stars">★★★★★</div>
+            <span class="author">~ Neha</span>
+          </div>
+        </div>
+
+        <div class="review-card rotate-3">
+          <img src="images/1.jpeg" alt="" />
+          <div class="review-info">
+            <p>“Loved the calm vibe, food and hospitality.”</p>
+            <div class="stars">★★★★★</div>
+            <span class="author">~ Rohan</span>
+          </div>
+        </div>
+
+        <div class="review-card rotate-4">
+          <img src="images/4.jpeg" alt="" />
+          <div class="review-info">
+            <p>“Views, silence and comfort – everything was perfect.”</p>
+            <div class="stars">★★★★★</div>
+            <span class="author">~ Simran</span>
+          </div>
+        </div>
+
+        <div class="review-card rotate-5">
+          <img src="images/3.jpeg" alt="" />
+          <div class="review-info">
+            <p>“A hidden gem in Panchgani. Will visit again!”</p>
+            <div class="stars">★★★★★</div>
+            <span class="author">~ Kunal</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-container"></div>
+    <script src="js/include-footer.js"></script>
+
+    <script>
+      document.querySelectorAll("img[data-hover]").forEach(function (img) {
+        const original = img.src;
+        const hover = img.dataset.hover;
+
+        /* PRELOAD hover image */
+        const preload = new Image();
+        preload.src = hover;
+
+        img.style.transition =
+          "transform 0.45s ease, filter 0.35s ease, opacity 0.35s ease";
+        img.style.backgroundColor = "transparent";
+
+        img.addEventListener("mouseenter", function () {
+          img.style.filter = "blur(6px)";
+          img.style.transform = "scale(0.97)";
+          img.style.opacity = "0.85";
+
+          setTimeout(() => {
+            img.src = hover;
+            img.style.filter = "blur(0)";
+            img.style.transform = "scale(1)";
+            img.style.opacity = "1";
+          }, 180);
+        });
+
+        img.addEventListener("mouseleave", function () {
+          img.style.filter = "blur(6px)";
+          img.style.transform = "scale(0.97)";
+          img.style.opacity = "0.85";
+
+          setTimeout(() => {
+            img.src = original;
+            img.style.filter = "blur(0)";
+            img.style.transform = "scale(1)";
+            img.style.opacity = "1";
+          }, 180);
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const opener = document.getElementById("opener");
+        if (!opener) return; // safety check
+
+        let openerClosed = false;
+
+        document.body.classList.add("opener-active");
+
+        function closeOpener(e) {
+          if (openerClosed) return;
+          openerClosed = true;
+
+          if (e) e.preventDefault();
+
+          opener.classList.add("hide");
+
+          setTimeout(() => {
+            opener.style.display = "none";
+            document.body.classList.remove("opener-active");
+            window.scrollTo(0, 0);
+          }, 1200);
+        }
+
+        window.addEventListener("wheel", closeOpener, {
+          passive: false,
+          once: true,
+        });
+        window.addEventListener("touchstart", closeOpener, {
+          passive: false,
+          once: true,
+        });
+        window.addEventListener("keydown", closeOpener, { once: true });
+      });
+    </script>
+
+    <div id="bottom-bar"></div>
+    <script src="js/include-bottom-bar.js"></script>
+
+    <script src="js/home-pin.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+
+</html>
