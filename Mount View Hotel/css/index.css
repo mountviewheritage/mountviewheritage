@@ -71,6 +71,7 @@ body.opener-active {
 
   .opener-mobile {
     display: block;
+    object-fit: stretch;
   }
 }
 
@@ -106,12 +107,7 @@ body.opener-active {
     /* Mobile safe vertical height */
   }
 
-  .opener-inner img,
-  .opener-inner video {
-    object-fit: cover;
-    object-position: center top;
-    /* faces upar cut na ho */
-  }
+
 }
 
 .home-hero {
@@ -1141,7 +1137,7 @@ img[data-hover] {
   .home-hero p {
     font-size: 14.5px;
     line-height: 1.7;
-    margin-bottom: 200px;
+    margin-bottom: 250px;
     /* 👆 This pushes button AFTER background image */
     color: #5a3a2e;
   }
