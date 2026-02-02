@@ -2,6 +2,10 @@
 /* MOBILE BOTTOM BAR STYLES */
 /* ========================================================= */
 
+* {
+    box-sizing: border-box;
+}
+
 .mobile-bottom-bar {
     position: fixed;
     bottom: 0;

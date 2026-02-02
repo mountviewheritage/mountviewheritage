@@ -1,10 +1,18 @@
 /* =========================
    HOME HERO SECTION
 ========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   width: 100%;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 /*preloader section*/
@@ -187,7 +195,7 @@ img[data-hover] {
   position: absolute;
   top: 0;
   left: 0;
-  width:90%;
+  width: 90%;
   height: 100%;
   margin: 0px auto;
   pointer-events: none;
@@ -427,6 +435,7 @@ img[data-hover] {
 @media (max-width: 769px) {
   .cta-section {
     padding: 70px 0px;
+    position: static;
   }
 
   .cta-container {
@@ -778,49 +787,49 @@ img[data-hover] {
   }
 
   .pin-1 {
-  top: 9.7%;
-  left: 51.5%;
-}
+    top: 9.7%;
+    left: 51.5%;
+  }
 
-.pin-2 {
-  top: 8%;
-  left: 60.9%;
-}
+  .pin-2 {
+    top: 8%;
+    left: 60.9%;
+  }
 
-.pin-3 {
-  top: 29.5%;
-  left: 12%;
-}
+  .pin-3 {
+    top: 29.5%;
+    left: 12%;
+  }
 
-.pin-4 {
-  top: 10.5%;
-  left: 39.5%;
-}
+  .pin-4 {
+    top: 10.5%;
+    left: 39.5%;
+  }
 
-.pin-5 {
-  top: 10.2%;
-  left: 92.5%;
-}
+  .pin-5 {
+    top: 10.2%;
+    left: 92.5%;
+  }
 
-.pin-6 {
-  top: 12.9%;
-  left: 6%;
-}
+  .pin-6 {
+    top: 12.9%;
+    left: 6%;
+  }
 
-.pin-7 {
-  top: 22.7%;
-  left: 33.2%;
-}
+  .pin-7 {
+    top: 22.7%;
+    left: 33.2%;
+  }
 
-.pin-8 {
-  top: 50%;
-  left: 34.2%;
-}
+  .pin-8 {
+    top: 50%;
+    left: 34.2%;
+  }
 
-.pin-9 {
-  top: 8.8%;
-  left: 71%;
-}
+  .pin-9 {
+    top: 8.8%;
+    left: 71%;
+  }
 }
 
 /* Tablet Portrait & Large Mobile (481px - 767px) */
@@ -890,20 +899,55 @@ img[data-hover] {
   }
 
   /* Adjust pin positions for tablet */
-  .pin-1 { top: 15%; left: 51.5%; }
-  .pin-2 { top: 14%; left: 59.9%; }
-  .pin-3 { top: 40%; left: 12%; }
-  .pin-4 { top: 18%; left: 39.5%; }
-  .pin-5 { top: 18%; left: 92.5%; }
-  .pin-6 { top: 22%; left: 6.0%; }
-  .pin-7 { top: 35%; left: 33.2%; }
-  .pin-8 { top: 50%; left: 50.2%; }
-  .pin-9 { top: 16%; left: 71.0%; }
+  .pin-1 {
+    top: 15%;
+    left: 51.5%;
+  }
+
+  .pin-2 {
+    top: 14%;
+    left: 59.9%;
+  }
+
+  .pin-3 {
+    top: 40%;
+    left: 12%;
+  }
+
+  .pin-4 {
+    top: 18%;
+    left: 39.5%;
+  }
+
+  .pin-5 {
+    top: 18%;
+    left: 92.5%;
+  }
+
+  .pin-6 {
+    top: 22%;
+    left: 6.0%;
+  }
+
+  .pin-7 {
+    top: 35%;
+    left: 33.2%;
+  }
+
+  .pin-8 {
+    top: 50%;
+    left: 50.2%;
+  }
+
+  .pin-9 {
+    top: 16%;
+    left: 71.0%;
+  }
 }
 
 /* Mobile (320px - 480px) */
 @media (max-width: 768px) {
-  .home-hero { 
+  .home-hero {
     background-image: url('../images/mobile-bg.png');
     background-size: 100% auto;
     background-position: center bottom 25%;
@@ -918,7 +962,6 @@ img[data-hover] {
     /* Brown color to match screenshot */
     display: flex;
     flex-direction: column;
-    min-height: 85vh;
     /* Ensure height to push button down */
     width: 100%;
   }
@@ -936,7 +979,7 @@ img[data-hover] {
   .hero-btn {
     /* Push button to bottom */
     position: absolute;
-    bottom: -200px;
+    bottom: 180px;
     border: none;
     background-color: #8d4a34;
     /* Filled button */
@@ -1032,15 +1075,50 @@ img[data-hover] {
   }
 
   /* Mobile pin positions */
-  .pin-1 { top: 10%; left: 51.5%; }
-  .pin-2 { top: 8.5%; left: 62.5%; }
-  .pin-3 { top: 30%; left: 8%; }
-  .pin-4 { top: 10.7%; left: 39.5%; }
-  .pin-5 { top: 10%; left: 92.5%; }
-  .pin-6 { top: 26.7%; left: 22%; }
-  .pin-7 { top: 42%; left: 47.2%; }
-  .pin-8 { top: 14.5%; left: 5.2%; }
-  .pin-9 { top: 9.2%; left: 73.0%; }
+  .pin-1 {
+    top: 10%;
+    left: 51.5%;
+  }
+
+  .pin-2 {
+    top: 8.5%;
+    left: 62.5%;
+  }
+
+  .pin-3 {
+    top: 30%;
+    left: 8%;
+  }
+
+  .pin-4 {
+    top: 10.7%;
+    left: 39.5%;
+  }
+
+  .pin-5 {
+    top: 10%;
+    left: 92.5%;
+  }
+
+  .pin-6 {
+    top: 26.7%;
+    left: 22%;
+  }
+
+  .pin-7 {
+    top: 42%;
+    left: 47.2%;
+  }
+
+  .pin-8 {
+    top: 14.5%;
+    left: 5.2%;
+  }
+
+  .pin-9 {
+    top: 9.2%;
+    left: 73.0%;
+  }
 }
 
 /* Extra Small Mobile (max 380px) */
@@ -1134,7 +1212,7 @@ img[data-hover] {
   .home-hero-inner {
     color: #a05035;
     margin-top: 60px;
-    margin-bottom: 60px;
+    height: auto;
   }
 
   .home-hero h1 {
@@ -1205,7 +1283,8 @@ img[data-hover] {
   .rooms-swiper {
     display: block;
     padding-left: 20px;
-    overflow: visible !important; /* Allow slides to be seen outside bounds */
+    overflow: visible !important;
+    /* Allow slides to be seen outside bounds */
     cursor: grab;
   }
 
@@ -2229,6 +2308,9 @@ img[data-hover] {
 @media (max-width: 480px) {
   .reviews-section {
     padding: 60px 0 60px;
+  }
+  .weekend-cta{
+    margin-top: -200px;
   }
 }
 
