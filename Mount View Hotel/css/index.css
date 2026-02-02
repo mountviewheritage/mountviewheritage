@@ -175,7 +175,7 @@ img[data-hover] {
 
 
 .rooms-section {
-  padding: 140px 90px;
+  padding: 140px 70px;
   /* background: #ffffff;  Removed background so it overlays nicely or uses container bg if implied. 
      User said "give cta section container background image", implying rooms might sit on it? 
      Let's keep transparent or remove white background. */
@@ -187,8 +187,9 @@ img[data-hover] {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width:90%;
   height: 100%;
+  margin: 0px auto;
   pointer-events: none;
   /* Let clicks pass through if it blocks core CTA? 
       CTA button is inside CTA container, rooms are also inside.
@@ -355,7 +356,7 @@ img[data-hover] {
   text-align: center;
   margin: 0px 0px;
   position: relative;
-  background-image: url('../images/room-bg.png');
+  /* background-image: url('../images/room-bg.png'); */
   background-size: cover;
   background-position: center;
   /* Ensure it has enough height if rooms are absolute, though content might define it. 
@@ -366,8 +367,8 @@ img[data-hover] {
 }
 
 .cta-illustration {
-  width: 100%;
-  margin: 0 auto 30px;
+  /* width: 100%; */
+  /* margin: 0 auto 30px; */
   display: block;
 }
 
@@ -969,6 +970,16 @@ img[data-hover] {
     display: none;
   }
 
+  .rooms-section {
+    height: auto;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .cta-illustration {
+    opacity: 0;
+  }
+
   .info-box {
     position: relative;
     flex: 0 0 90%;
@@ -1194,6 +1205,8 @@ img[data-hover] {
   .rooms-swiper {
     display: block;
     padding-left: 20px;
+    overflow: visible !important; /* Allow slides to be seen outside bounds */
+    cursor: grab;
   }
 
   /* Swiper slide size */
@@ -1304,7 +1317,7 @@ img[data-hover] {
   }
 
   .rooms-swiper {
-    overflow: hidden;
+    overflow: visible !important;
   }
 
   .stars {
@@ -2222,7 +2235,6 @@ img[data-hover] {
 /* ================= WEEKEND CTA (NEW) ================= */
 .weekend-cta {
   background: #ffffff;
-  padding: 80px 20px;
   text-align: center;
 }
 
@@ -2248,9 +2260,7 @@ img[data-hover] {
 
 /* Responsive adjustments for the new section */
 @media (max-width: 768px) {
-  .weekend-cta {
-    padding: 60px 20px;
-  }
+
 
   .weekend-cta h2 {
     font-size: 30px;
