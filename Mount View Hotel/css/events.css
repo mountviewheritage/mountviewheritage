@@ -15,6 +15,19 @@
   font-family: "Georgia", serif;
 }
 
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  filter: blur(12px);
+  transform: scale(1.03);
+  transition: opacity 0.7s ease, filter 0.7s ease, transform 0.7s ease;
+  z-index: 1;
+}
+
 /* Glass blur card */
 .hero-overlay {
   width: 625px;
@@ -181,28 +194,11 @@
 .event-slider-right {
   overflow: hidden;
   position: relative;
+  flex: 1;
 }
 
 /* BLUR FADE SLIDE EFFECT */
-.slide {
-  position: absolute;
-  inset: 0;
-
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  opacity: 0;
-  filter: blur(12px);
-  transform: scale(1.03);
-
-  transition:
-    opacity 0.7s ease,
-    filter 0.7s ease,
-    transform 0.7s ease;
-
-  z-index: 1;
-}
+/* BLUR FADE SLIDE EFFECT REMOVED (Defined at top) */
 
 .slide.active {
   opacity: 1;
@@ -646,6 +642,10 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform: translateZ(0);
+
+  /* Fixed dimensions */
+  width: 350px;
+  height: 450px;
 }
 
 .collage-item img {
@@ -660,27 +660,8 @@
   z-index: 20;
 }
 
-/* Variable widths/heights for the "Collage" feel, but in a line */
-
-.item-1 {
-  width: 320px;
-  height: 400px;
-}
-
-.item-2 {
-  width: 380px;
-  height: 480px;
-}
-
-.item-3 {
-  width: 300px;
-  height: 520px;
-}
-
-.item-4 {
-  width: 360px;
-  height: 380px;
-}
+/* Variable widths/heights removed for fixed dimensions */
+/* .item-1, .item-2, .item-3, .item-4 sizing removed */
 
 /* ================= RESPONSIVE ================= */
 
@@ -709,24 +690,9 @@
   }
 
   /* Smaller fixed sizes for mobile scrolling */
-  .item-1 {
-    width: 240px;
-    height: 300px;
-  }
-
-  .item-2 {
-    width: 280px;
-    height: 360px;
-  }
-
-  .item-3 {
-    width: 220px;
-    height: 380px;
-  }
-
-  .item-4 {
+  .collage-item {
     width: 260px;
-    height: 280px;
+    height: 350px;
   }
 }
 

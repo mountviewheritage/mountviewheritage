@@ -205,6 +205,12 @@
     display: flex;
     width: max-content;
     animation: oasisScroll 25s linear infinite;
+
+    /* Anti-flicker fixes */
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
   }
 
   /* Hover = pause */
@@ -218,24 +224,22 @@
     height: 420px;
     object-fit: cover;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 10px 20px;
+
+    /* Anti-flicker fixes */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 
   /* Animation */
   @keyframes oasisScroll {
     from {
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
     }
 
     to {
-      transform: translateX(-50%);
+      transform: translate3d(-50%, 0, 0);
     }
-  }
-
-  .oasis-track {
-    display: flex;
-    width: max-content;
-    /* 🔥 MOST IMPORTANT */
-    animation: oasisScroll 25s linear infinite;
   }
 }
 
@@ -331,6 +335,10 @@
   .heritage-image img {
     border-radius: 6px;
   }
+
+  .oasis-text p br {
+    display: none;
+  }
 }
 
 /* Responsive Design section 1*/
@@ -402,7 +410,7 @@
 /* ================= ABOUT DESKTOP GALLERY ================= */
 
 .about-desktop-gallery {
-  padding: 120px 80px;
+  padding: 120px 0px;
   background: #faf6f1;
 }
 
@@ -410,7 +418,6 @@
 .about-gallery-inner {
   display: grid;
   grid-template-columns: 1.2fr 0.6fr 1.4fr 0.8fr;
-  grid-auto-rows: 180px;
   align-items: end;
 }
 

@@ -33,6 +33,18 @@ body {
 
 }
 
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  filter: blur(12px);
+  transform: scale(1.03);
+  transition: opacity 0.7s ease, filter 0.7s ease, transform 0.7s ease;
+  z-index: 1;
+}
 
 
 /* inner content */
@@ -235,7 +247,7 @@ img[data-hover] {
   font-weight: lighter;
   font-size: 32px;
   margin-bottom: 60px;
-  color: #2d2d2d;
+  color: #ffffff;
 }
 
 /* GRID */
@@ -390,7 +402,7 @@ img[data-hover] {
   font-family: Georgia, serif;
   font-size: 42px;
   font-weight: 500;
-  color: #2e2e2e;
+  color: #ffffff;
   margin-bottom: 22px;
 }
 
@@ -1087,12 +1099,51 @@ img[data-hover] {
     top: 9.2%;
     left: 73.0%;
   }
+
+  /* Info Slider Adjustments for Mobile Visibility */
+  .info-slider {
+    display: flex !important;
+    /* Ensure it is not hidden */
+    bottom: 25px;
+    /* Moved up slightly */
+    z-index: 100 !important;
+    /* Ensure it's above map elements */
+    padding: 0 15px 15px 15px;
+    /* Add bottom padding */
+  }
+
+  .info-box {
+    position: relative;
+    /* Ensure it flows in the flex container */
+    bottom: auto !important;
+    /* Reset desktop absolute positioning */
+    right: auto !important;
+    /* Reset desktop absolute positioning */
+    left: auto !important;
+    top: auto !important;
+
+    transform: translateY(0);
+    /* Ensure visible by default */
+    background: rgba(72, 71, 71, 0.95);
+    /* Slightly more opaque */
+    z-index: 101 !important;
+  }
+
+  /* Mobile Animation Override */
+  .info-box.hide {
+    opacity: 0;
+    transform: translateY(100%);
+  }
 }
 
 /* Extra Small Mobile (max 380px) */
 @media (max-width: 380px) {
   .map-wrapper {
     height: 480px;
+  }
+
+  .info-slider {
+    bottom: 70px;
   }
 
   .info-box {
@@ -1165,8 +1216,9 @@ img[data-hover] {
 @media (max-width: 768px) {
   .home-hero {
     min-height: auto;
-    background-size: contain;
-    padding: 0px 20px 80px;
+    background-size: cover;
+    padding: 0px;
+    padding-bottom: 50px;
     /* 🔥 TOP SPACE FIX */
     background-image: url("../images/cloud.png");
   }
@@ -1184,19 +1236,21 @@ img[data-hover] {
 
   .home-hero h1 {
     margin-top: 60px;
-    font-size: 30px;
+    font-size: 36px;
     line-height: 1.25;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     color: #a05035;
     order: 1;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .home-hero p {
-    font-size: 14.5px;
+    font-size: 19.5px;
     line-height: 1.7;
-    margin-bottom: 130px;
     color: #5a3a2e;
     order: 2;
+    width: 85%;
   }
 
 
@@ -1777,24 +1831,24 @@ img[data-hover] {
 
 /* ARC POSITIONS - Using flex-based translation for stability */
 .rotate-1 {
-  transform: rotate(-12deg) translateY(40px);
+  transform: translateY(60px) rotate(-12deg);
 }
 
 .rotate-2 {
-  transform: rotate(-6deg) translateY(10px);
+  transform: translateY(10px) rotate(-6deg);
 }
 
 .rotate-3 {
-  transform: rotate(0deg) translateY(-10px);
+  transform: translateY(-10px) rotate(0deg);
   z-index: 5;
 }
 
 .rotate-4 {
-  transform: rotate(6deg) translateY(10px);
+  transform: translateY(10px) rotate(6deg);
 }
 
 .rotate-5 {
-  transform: rotate(12deg) translateY(40px);
+  transform: translateY(60px) rotate(12deg);
 }
 
 /* Adding a glow behind the section */

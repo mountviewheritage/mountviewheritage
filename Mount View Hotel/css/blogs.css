@@ -58,6 +58,17 @@
 /* ========================= FEATURED BLOG CARD ========================= */
 .featured-blog {
   margin-top: 20px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.blog-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .blog-hero-img {

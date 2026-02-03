@@ -131,11 +131,12 @@ video::-webkit-media-controls-play-button {
     justify-content: center;
     align-items: center;
     gap: 18px;
-    width: 96%;
     margin-left: auto;
     margin-right: auto;
     overflow-x: auto;
+    overflow-y: hidden;
     scroll-behavior: smooth;
+
 }
 
 /* INITIAL IMAGE STATE (ANIMATION START) */
@@ -868,6 +869,8 @@ video::-webkit-media-controls-play-button {
     .oasis-images {
         gap: 10px;
         grid-template-columns: repeat(5, 1fr);
+        padding-left: 120px;
+        padding-right: 20px;
     }
 
     .oasis-img {
