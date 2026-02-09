@@ -25,19 +25,41 @@
         <source src="videos/vatsara_006.mov" type="video/mp4" />
       </video>
 
-
+      <button id="muteBtn" class="mute-btn">
+        <i class="fas fa-volume-mute"></i>
+      </button>
     </div>
   </section>
 
   <script>
     const video = document.getElementById("experienceVideo");
+    const muteBtn = document.getElementById("muteBtn");
+    const muteIcon = muteBtn.querySelector("i");
 
-    // Helper to unmute and restart video
-    function enableSound() {
-      // Unmute
+    // Unified function to handle mute/unmute
+    function toggleMute() {
+      video.muted = !video.muted;
+      updateMuteIcon();
+    }
+
+    function updateMuteIcon() {
+      if (video.muted) {
+        muteIcon.className = "fas fa-volume-mute";
+      } else {
+        muteIcon.className = "fas fa-volume-up";
+      }
+    }
+
+    muteBtn.addEventListener("click", toggleMute);
+
+    // Initial check (in case browser allows unmuted autoplay)
+    updateMuteIcon();
+
+    // Helper to unmute and restart video (Auto-enable sound on first interaction)
+    function enableSoundOnFirstInteraction() {
       video.muted = false;
-
-      // Attempt to play (if paused)
+      updateMuteIcon();
+      
       const playPromise = video.play();
       if (playPromise !== undefined) {
         playPromise.catch(error => {
@@ -45,23 +67,12 @@
         });
       }
 
-      // Remove listeners so it only happens once
-      document.removeEventListener("click", enableSound);
-      document.removeEventListener("touchstart", enableSound);
-      console.log("Sound enabled by user interaction");
+      document.removeEventListener("click", enableSoundOnFirstInteraction);
+      document.removeEventListener("touchstart", enableSoundOnFirstInteraction);
     }
 
-    // Listen for ANY interaction to enable sound
-    document.addEventListener("click", enableSound);
-    document.addEventListener("touchstart", enableSound);
-
-    // Optional: Try to unmute immediately (might work if user already interacted with domain)
-    video.muted = false;
-    video.play().catch(() => {
-      // If blocked, revert to muted for visual autoplay
-      video.muted = true;
-      video.play();
-    });
+    document.addEventListener("click", enableSoundOnFirstInteraction);
+    document.addEventListener("touchstart", enableSoundOnFirstInteraction);
   </script>
 
   <section class="oasis-section">

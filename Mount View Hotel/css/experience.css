@@ -75,9 +75,51 @@ video::-webkit-media-controls-play-button {
     transform: translate(-50%, -50%) scale(1.08);
 }
 
+/* =========================================
+   MUTE BUTTON
+========================================= */
+.mute-btn {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 10;
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    
+    transition: all 0.3s ease;
+}
 
+.mute-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
 
-/* ===== OASIS SECTION ===== */
+.mute-btn i {
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .mute-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+        font-size: 16px;
+    }
+}
 
 /* ================================
    OASIS SECTION MAIN STYLES
@@ -632,7 +674,6 @@ video::-webkit-media-controls-play-button {
 .collage-item img {
     width: 90%;
     height: 90%;
-    object-fit: cover;
     display: block;
 }
 
@@ -1108,16 +1149,16 @@ video::-webkit-media-controls-play-button {
   .amenity-overlay p { font-size: 42px; }
 
   /* Explore Section */
-  .explore-text h2 { font-size: 78px; }
-  .explore-text p { font-size: 32px; }
+  .explore-text h2 { font-size: 58px; }
+  .explore-text p { font-size: 22px; }
   .explore-collage { 
     height: 900px;
     margin-top: 40px;
   }
-  .item1 { width: 25vw; height: 800px; left: -2vw; top: 80px; }
-  .item2 { width: 25vw; height: 450px; left: 18vw; top: 180px; }
-  .item3 { width: 22vw; height: 700px; left: 38vw; top: 120px; }
-  .item4 { width: 45vw; height: 650px; left: 58vw; top: 0; }
+  .item1 { width: 25vw; height: 800px; left: 0vw; top: 60px; }
+  .item2 { width: 25vw; height: 450px; left: 22vw; top: 180px; }
+  .item3 { width: 25vw; height: 700px; left: 42vw; top: 120px; }
+  .item4 { width: 45vw; height: 650px; left: 60vw; top: 0; }
   .collage-caption { font-size: 28px; }
 
   /* Spotlight & Trending */
