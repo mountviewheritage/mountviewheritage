@@ -233,6 +233,16 @@
     }
 }
 
+@media (min-width: 1561px) {
+  .blog-main p {
+    font-size: 30px;
+    line-height: 1.8;
+  }
+  .related-card img {
+    height: auto;
+  }
+}
+
 /* TABLET PORTRAIT & LARGE MOBILE (481px - 768px) */
 @media (max-width: 768px) {
     .blog-hero-img {

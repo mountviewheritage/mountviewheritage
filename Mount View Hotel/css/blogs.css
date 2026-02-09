@@ -199,6 +199,27 @@
 }
 
 
+@media (min-width: 1561px) {
+  .blog-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .blog-hero-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  .blog-main p {
+    margin-bottom: 25px;
+    font-size: 30px;
+    color: #2c2c2c;
+    line-height: 1.8;
+  }
+}
 
 /* TABLET */
 @media (max-width: 992px) {
