@@ -413,6 +413,7 @@ video::-webkit-media-controls-play-button {
         color: #2e2e2e;
         margin-bottom: 20px;
         text-align: left;
+        margin-top: 50px;
     }
 
     /* SUBTITLE */
@@ -557,6 +558,7 @@ video::-webkit-media-controls-play-button {
         font-weight: 500;
         color: #2e2e2e;
         margin-bottom: 14px;
+        margin-top: 50px;
     }
 
     /* SUBTITLE */
@@ -566,6 +568,7 @@ video::-webkit-media-controls-play-button {
         color: #4a4a4a;
         max-width: 640px;
         margin: 0 auto 28px;
+        margin-bottom: 50px;
     }
 
     /* CTA BUTTON */
@@ -1143,8 +1146,8 @@ video::-webkit-media-controls-play-button {
   .food-card p { font-size: 26px; }
 
   /* Amenities Section */
-  .amenities-title { font-size: 52px; }
-  .amenities-subtitle { font-size: 26px; }
+  .amenities-title { font-size: 35px; margin-top: 50px; }
+  .amenities-subtitle { font-size: 18px; margin-bottom: 50px; }
   .amenity-card { height: 650px; }
   .amenity-overlay p { font-size: 42px; }
 
@@ -1156,8 +1159,8 @@ video::-webkit-media-controls-play-button {
     margin-top: 40px;
   }
   .item1 { width: 25vw; height: 800px; left: 0vw; top: 60px; }
-  .item2 { width: 25vw; height: 450px; left: 22vw; top: 180px; }
-  .item3 { width: 25vw; height: 700px; left: 42vw; top: 120px; }
+  .item2 { width: 30vw; height: 450px; left: 20vw; top: 180px; }
+  .item3 { width: 30vw; height: 700px; left: 40vw; top: 120px; }
   .item4 { width: 45vw; height: 650px; left: 60vw; top: 0; }
   .collage-caption { font-size: 28px; }
 
