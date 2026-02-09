@@ -787,47 +787,47 @@ img[data-hover] {
   }
 
   .pin-1 {
-    top: 8.7%;
+    top: 6.7%;
     left: 51.5%;
   }
 
   .pin-2 {
-    top: 7.8%;
+    top: 5.8%;
     left: 55.6%;
   }
 
   .pin-3 {
-    top: 39.5%;
+    top: 29.5%;
     left: 12%;
   }
 
   .pin-4 {
-    top: 9.6%;
+    top: 7.3%;
     left: 44.5%;
   }
 
   .pin-5 {
-    top: 9.9%;
+    top: 7.4%;
     left: 72.5%;
   }
 
   .pin-6 {
-    top: 12.9%;
+    top: 9.5%;
     left: 26%;
   }
 
   .pin-7 {
-    top: 27.2%;
+    top: 20.4%;
     left: 33.2%;
   }
 
   .pin-8 {
-    top: 40%;
+    top: 30%;
     left: 50.2%;
   }
 
   .pin-9 {
-    top: 8.8%;
+    top: 6.5%;
     left: 61%;
   }
 
@@ -848,7 +848,7 @@ img[data-hover] {
     width: 94%;
     height: 100%;
     margin: 0px auto;
-    pointer-events: none;
+    /* pointer-events: none; REMOVED to allow interaction */
     opacity: 0;
     animation: roomAppear 1s ease 1s forwards;
     z-index: 10;
@@ -869,7 +869,7 @@ img[data-hover] {
     transform: translateY(60px);
     opacity: 0;
     transition: 0.6s ease;
-    height: 960px;
+    height: auto; /* Changed from 960px to auto for better layout */
   }
 
   .room-img img {
