@@ -161,6 +161,13 @@
     ];
 
     let index = 0;
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('room')) {
+      const roomIndex = parseInt(urlParams.get('room'));
+      if (!isNaN(roomIndex) && roomIndex >= 0 && roomIndex < slides.length) {
+        index = roomIndex;
+      }
+    }
 
     const bg = document.getElementById("roomBg");
     const g1 = document.getElementById("g1");

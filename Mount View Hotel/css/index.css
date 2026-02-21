@@ -215,13 +215,6 @@ img[data-hover] {
   width: 94%;
   height: 100%;
   margin: 0px auto;
-  pointer-events: none;
-  /* Let clicks pass through if it blocks core CTA? 
-      CTA button is inside CTA container, rooms are also inside.
-      If rooms cover CTA, user can't click "Book Now" on CTA. 
-      But rooms have "Book Now" links too.
-      Let's assume user wants rooms VISIBLE on top.
-      I will NOT add pointer-events: none because rooms have links. */
 
   /* Initial hidden state for animation */
   opacity: 0;

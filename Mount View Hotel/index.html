@@ -65,7 +65,7 @@
 
         <!-- DESKTOP GRID -->
         <div class="rooms-grid">
-          <a href="rooms.html" class="room-card reveal">
+          <a href="rooms.html?room=0" class="room-card reveal">
             <div class="room-img">
               <img src="images/double-deluxe.png" data-hover="images/double-deluxe.png" />
 
@@ -92,7 +92,7 @@
           </a>
 
           <!-- COPY SAME CARD 3 MORE TIMES -->
-          <a href="rooms.html" class="room-card reveal">
+          <a href="rooms.html?room=1" class="room-card reveal">
             <div class="room-img">
               <img src="images/triple-deluxe.png" data-hover="images/triple-deluxe.png" />
 
@@ -118,7 +118,7 @@
             </div>
           </a>
 
-          <a href="rooms.html" class="room-card reveal">
+          <a href="rooms.html?room=2" class="room-card reveal">
             <div class="room-img">
               <img src="images/hom3.png" data-hover="images/hom3.png" />
 
@@ -144,7 +144,7 @@
             </div>
           </a>
 
-          <a href="rooms.html" class="room-card reveal">
+          <a href="rooms.html?room=3" class="room-card reveal">
             <div class="room-img">
               <img src="images/hom4.png" data-hover="images/hom4.png" />
 
@@ -175,7 +175,7 @@
         <div class="swiper rooms-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <a href="rooms.html" class="room-card">
+              <a href="rooms.html?room=0" class="room-card">
                 <div class="room-img">
                   <img src="images/hom1.png" />
                 </div>
@@ -192,7 +192,7 @@
 
             <!-- Duplicate slides -->
             <div class="swiper-slide">
-              <a href="rooms.html" class="room-card">
+              <a href="rooms.html?room=1" class="room-card">
                 <div class="room-img">
                   <img src="images/hom2.png" />
                 </div>
@@ -208,7 +208,7 @@
             </div>
 
             <div class="swiper-slide">
-              <a href="rooms.html" class="room-card">
+              <a href="rooms.html?room=2" class="room-card">
                 <div class="room-img">
                   <img src="images/hom3.png" />
                 </div>
@@ -224,7 +224,7 @@
             </div>
 
             <div class="swiper-slide">
-              <a href="rooms.html" class="room-card">
+              <a href="rooms.html?room=3" class="room-card">
                 <div class="room-img">
                   <img src="images/hom4.png" />
                 </div>
@@ -554,46 +554,6 @@
     <div id="footer-container"></div>
     <script src="js/include-footer.js"></script>
 
-    <script>
-      document.querySelectorAll("img[data-hover]").forEach(function (img) {
-        const original = img.src;
-        const hover = img.dataset.hover;
-
-        /* PRELOAD hover image */
-        const preload = new Image();
-        preload.src = hover;
-
-        img.style.transition =
-          "transform 0.45s ease, filter 0.35s ease, opacity 0.35s ease";
-        img.style.backgroundColor = "transparent";
-
-        img.addEventListener("mouseenter", function () {
-          img.style.filter = "blur(6px)";
-          img.style.transform = "scale(1.97)";
-          img.style.opacity = "0.85";
-
-          setTimeout(() => {
-            img.src = hover;
-            img.style.filter = "blur(0)";
-            img.style.transform = "scale(1)";
-            img.style.opacity = "1";
-          }, 180);
-        });
-
-        img.addEventListener("mouseleave", function () {
-          img.style.filter = "blur(6px)";
-          img.style.transform = "scale(0.97)";
-          img.style.opacity = "0.85";
-
-          setTimeout(() => {
-            img.src = original;
-            img.style.filter = "blur(0)";
-            img.style.transform = "scale(1)";
-            img.style.opacity = "1";
-          }, 180);
-        });
-      });
-    </script>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
