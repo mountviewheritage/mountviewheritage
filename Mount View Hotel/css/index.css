@@ -59,7 +59,7 @@ body {
   height: 100%;
   object-fit: stretch;
   /* Shows the full image without cropping */
-  background: #000;
+  /* background: #000; */
   /* Fallback background */
 }
 
@@ -76,7 +76,84 @@ body.opener-active {
 }
 
 .opener-desktop {
+  position: relative;
+  width: 100%;
+  height: 100%;
   display: block;
+  overflow: hidden;
+}
+
+.opener-desktop-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.opener-desktop-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 40px;
+  pointer-events: none; /* Let any clicks pass through if needed */
+}
+
+.opener-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 25px; /* space between logo & hotel name */
+}
+
+.opener-inner .opener-logo {
+  /* It increases size based on screen width instead of stretching */
+  width: 12vw; 
+  max-width: 250px;
+  min-width: 120px;
+  height: auto !important;
+  aspect-ratio: 1 / 1;
+  object-fit: cover !important;
+  margin-right: 50px;
+}
+
+.opener-bottom-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 60px;
+  color: #fff;
+}
+
+.nav-btn {
+  font-family: inherit;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.nav-title {
+  font-family: inherit;
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.nav-line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 40px;
 }
 
 .opener-mobile {
@@ -94,7 +171,6 @@ body.opener-active {
     object-fit: stretch;
   }
 }
-
 
 @media (max-width: 1024px) {
 
@@ -170,7 +246,7 @@ body.opener-active {
 
 /* Paragraph */
 .home-hero p {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.8;
   max-width: 680px;
   margin: 0 auto 40px;
@@ -548,6 +624,14 @@ img[data-hover] {
 .pin-icon i {
   transform: rotate(45deg);
   display: block;
+}
+
+.pin-icon img {
+  filter: brightness(0) invert(1);
+}
+
+.pin-white .pin-icon img {
+  filter: none;
 }
 
 /* ACTIVE PIN */
@@ -1733,14 +1817,14 @@ img[data-hover] {
 
 .amenities-title {
   font-family: "Georgia", serif;
-  font-size: 35px;
+  font-size: 42px;
   color: #2c2c2c;
   margin-bottom: 15px;
   font-weight: lighter;
 }
 
 .amenities-subtitle {
-  font-size: 16px;
+  font-size: 20px;
   width: 60%;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -1844,7 +1928,7 @@ img[data-hover] {
 
 .reviews-title {
   font-family: "Georgia", serif;
-  font-size: 48px;
+  font-size: 42px;
   font-weight: lighter;
   margin-bottom: 80px;
   color: #2d2d2d;
@@ -1915,7 +1999,7 @@ img[data-hover] {
 
 .review-info p {
   font-family: "Georgia", serif;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.5;
   color: #fff;
   margin-bottom: 20px;
@@ -2533,7 +2617,7 @@ img[data-hover] {
 }
 
 .weekend-cta p {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.7;
   color: #4a4a4a;
   margin-bottom: 36px;

@@ -134,14 +134,14 @@ video::-webkit-media-controls-play-button {
 
 /* TEXT CENTER AREA */
 .oasis-text h2 {
-    font-size: 35px;
+    font-size: 42px;
     font-weight: normal;
     margin-bottom: 20px;
     color: #2d2d2d;
 }
 
 .oasis-text p {
-    font-size: 16px;
+    font-size: 20px;
     color: #3d3d3d;
     line-height: 1.7;
     margin-bottom: 25px;
@@ -322,17 +322,17 @@ video::-webkit-media-controls-play-button {
 
 .amenities-title {
     font-family: "Georgia", serif;
-    font-size: 35px;
+    font-size: 42px;
     color: #2c2c2c;
     margin-bottom: 15px;
     font-weight: lighter;
 }
 
 .amenities-subtitle {
-    font-size: 16px;
+    font-size: 20px;
     width: 60%;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
     color: #444;
     line-height: 26px;
     font-family: "Georgia", serif;
@@ -638,14 +638,14 @@ video::-webkit-media-controls-play-button {
 }
 
 .explore-text h2 {
-    font-size: 58px;
+    font-size: 42px;
     font-weight: 500;
     color: #333;
     margin-bottom: 15px;
 }
 
 .explore-text p {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.6;
     color: #555;
     max-width: 500px;
@@ -1148,14 +1148,14 @@ video::-webkit-media-controls-play-button {
   .food-card p { font-size: 26px; }
 
   /* Amenities Section */
-  .amenities-title { font-size: 35px; margin-top: 50px; }
+  .amenities-title { font-size: 42px; margin-top: 50px; }
   .amenities-subtitle { font-size: 18px; margin-bottom: 50px; }
   .amenity-card { height: 650px; }
   .amenity-overlay p { font-size: 42px; }
 
   /* Explore Section */
-  .explore-text h2 { font-size: 58px; }
-  .explore-text p { font-size: 22px; }
+  .explore-text h2 { font-size: 42px; }
+  .explore-text p { font-size: 20px; }
   .explore-collage { 
     height: 900px;
     margin-top: 40px;

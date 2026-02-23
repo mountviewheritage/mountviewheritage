@@ -20,7 +20,7 @@
 .contact-left .desc {
     width: 80%;
     line-height: 1.6;
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 40px;
 }
 
@@ -141,4 +141,97 @@
         font-size: 16px;
         padding: 14px;
     }
+}
+
+/* CUSTOM SELECT DROPDOWN ANIMATION */
+.custom-select-wrapper {
+    position: relative;
+    user-select: none;
+    width: 100%;
+}
+
+.custom-select {
+    position: relative;
+    width: 100%;
+}
+
+.select-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #d0c8c2;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.select-trigger .arrow {
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #333;
+    border-bottom: 2px solid #333;
+    transform: rotate(45deg);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.custom-select.open .select-trigger {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.custom-select.open .arrow {
+    transform: rotate(-135deg) translate(-2px, -2px);
+}
+
+.select-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #d0c8c2;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    
+    /* Smooth Entry/Exit Animation */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.custom-select.open .select-options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.select-option {
+    padding: 14px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #4a4a4a;
+    transition: background 0.2s ease, padding-left 0.2s ease;
+}
+
+.select-option:hover {
+    background: #fdf8f4;
+    padding-left: 18px;
+}
+
+.select-option.selected {
+    background: #f4eee7;
+    font-weight: 600;
 }
