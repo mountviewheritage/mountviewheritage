@@ -3,7 +3,7 @@ let sliderIndex = 0;
 const sliderData = [
     {
         title: "Entire Property",
-        desc: "Wake up above the clouds,where the sun paints the skyin seven hues.",
+        desc: "Wander through whispering trails and mountain paths that call to the soul.",
         capacity: "Capacity: 120 Pax event, 35 Pax stay",
         img: "images/c1.png" // add your image 1 here
     },
@@ -15,13 +15,13 @@ const sliderData = [
     },
     {
         title: "Outdoor space",
-        desc: "Wander through whispering trails and mountain paths that call to the soul.",
+        desc: "Host your celebrations where the mountains become your backdrop and every gathering feels unforgettable.",
         capacity: "Capacity: 120 Pax",
         img: "images/c3.png" // add your image 3 here
     },
     {
         title: "Outdoor space",
-        desc: "Let furry paws wander, a haven where nature becomes their playground.",
+        desc: "Let furry paws wander, a haven where nature becomes their playground",
         capacity: "Capacity: 120 Pax",
         img: "images/c3.png" // add your image 3 here
     }

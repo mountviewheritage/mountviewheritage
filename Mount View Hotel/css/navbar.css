@@ -12,7 +12,7 @@
   top: 0;
   left: 0;
 
-  padding: 8px 40px;
+  padding: 0px 40px;
 
   display: flex;
   justify-content: space-between;
@@ -35,8 +35,9 @@
 
 /* LOGO */
 .nav-logo img {
-  height: 50px;
-  opacity: 0.9;
+  height: 70px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* BOOK NOW */
@@ -142,7 +143,7 @@
   /* ================= HEADER ================= */
 
   .main-nav {
-    padding: 14px 18px;
+    padding: 4px 18px;
     background: #fbf7ef;
   }
 
@@ -175,7 +176,9 @@
   /* ================= LOGO ================= */
 
   .nav-logo img {
-    height: 42px;
+    height: 45px;
+    width: auto;
+    object-fit: contain;
   }
 
   /* ================= RIGHT SIDE (LOCATION) ================= */
@@ -222,5 +225,15 @@
 @media (min-width: 769px) {
   .mobile-location {
     display: none;
+  }
+}
+
+/* GLOBAL DESKTOP OVERRIDES */
+@media (min-width: 1024px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 42px;
+  }
+  p {
+    font-size: 20px;
   }
 }

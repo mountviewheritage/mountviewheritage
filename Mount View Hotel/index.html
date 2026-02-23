@@ -25,8 +25,22 @@
   <div id="opener">
     <div class="opener-inner">
       <!-- YAHAN tu apni image / video dalega -->
-      <img src="images/opener.png" class="opener-desktop" alt="Opener" />
-      <img src="images/opener-mobile.png" class="opener-mobile" alt="Opener" />
+      <div class="opener-desktop">
+        <img src="images/loader-bg-desktop.webp" class="opener-desktop-bg" alt="Opener Background" />
+        <div class="opener-desktop-overlay">
+          <div class="opener-logo-wrapper">
+            <img src="images/mainlogo-white.png" class="opener-logo" alt="Mount View Logo" />
+          </div>
+          <div class="opener-bottom-content">
+            <span class="nav-btn">MENU</span>
+            <div class="nav-line"></div>
+            <h2 class="nav-title">MOUNT VIEW HOTEL</h2>
+            <div class="nav-line"></div>
+            <span class="nav-btn">BOOK NOW!</span>
+          </div>
+        </div>
+      </div>
+      <img src="images/opener-mobile.webp" class="opener-mobile" alt="Opener" />
       <!-- ya -->
       <!-- <video autoplay muted loop playsinline src="opener.mp4"></video> -->
     </div>
@@ -39,14 +53,12 @@
   <section class="home-hero">
     <div class="home-hero-inner">
       <!-- Desktop illustration only -->
-      <img src="images/final-logo.png" alt="Mountview Illustration" class="hero-illustration" />
+      <img src="images/sketch.png" alt="Mountview Illustration" class="hero-illustration" />
 
-      <h1>Welcome to your home amidst nature.</h1>
+      <h1>Welcome to your home away from home</h1>
 
       <p>
-        Located at an altitude of 4,200 ft, right in the heart of Panchgani,
-        our hotel provides the ideal base to relax and explore the mesmerizing
-        beauty of this renowned hill station.
+        Nestled at 4,200 ft in the Sahyadri Mountains, Mount View Heritage Hotel offers a serene mountain view hotel experience with breathtaking sunsets, cool breezes, and timeless charm perfect for leisure stays, family holidays, and romantic getaways.
       </p>
 
       <img src="images/mob-home-1.png" alt="Mountview Illustration" class="hero-illustration_2" />
@@ -65,7 +77,7 @@
 
         <!-- DESKTOP GRID -->
         <div class="rooms-grid">
-          <a href="rooms.html" class="room-card reveal">
+          <a href="rooms.html?room=0" class="room-card reveal">
             <div class="room-img">
               <img src="images/double-deluxe.png" data-hover="images/double-deluxe.png" />
 
@@ -92,7 +104,7 @@
           </a>
 
           <!-- COPY SAME CARD 3 MORE TIMES -->
-          <a href="rooms.html" class="room-card reveal">
+          <a href="rooms.html?room=1" class="room-card reveal">
             <div class="room-img">
               <img src="images/triple-deluxe.png" data-hover="images/triple-deluxe.png" />
 
@@ -118,7 +130,7 @@
             </div>
           </a>
 
-          <a href="rooms.html" class="room-card reveal">
+          <a href="rooms.html?room=2" class="room-card reveal">
             <div class="room-img">
               <img src="images/hom3.png" data-hover="images/hom3.png" />
 
@@ -144,7 +156,7 @@
             </div>
           </a>
 
-          <a href="rooms.html" class="room-card reveal">
+          <a href="rooms.html?room=3" class="room-card reveal">
             <div class="room-img">
               <img src="images/hom4.png" data-hover="images/hom4.png" />
 
@@ -175,7 +187,7 @@
         <div class="swiper rooms-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <a href="rooms.html" class="room-card">
+              <a href="rooms.html?room=0" class="room-card">
                 <div class="room-img">
                   <img src="images/hom1.png" />
                 </div>
@@ -192,7 +204,7 @@
 
             <!-- Duplicate slides -->
             <div class="swiper-slide">
-              <a href="rooms.html" class="room-card">
+              <a href="rooms.html?room=1" class="room-card">
                 <div class="room-img">
                   <img src="images/hom2.png" />
                 </div>
@@ -208,7 +220,7 @@
             </div>
 
             <div class="swiper-slide">
-              <a href="rooms.html" class="room-card">
+              <a href="rooms.html?room=2" class="room-card">
                 <div class="room-img">
                   <img src="images/hom3.png" />
                 </div>
@@ -224,7 +236,7 @@
             </div>
 
             <div class="swiper-slide">
-              <a href="rooms.html" class="room-card">
+              <a href="rooms.html?room=3" class="room-card">
                 <div class="room-img">
                   <img src="images/hom4.png" />
                 </div>
@@ -311,11 +323,9 @@
     </script>
     <section class="weekend-cta">
       <div class="cta-inner">
-        <h2>Spend a weekend with us</h2>
+        <h2>Your Panchgani Mountain Getaway Awaits</h2>
         <p>
-          Experience Panchgani like never before. Stay at the historic Mount
-          View Heritage Hotel and uncover a weekend of adventure, beauty, and
-          timeless charm.
+          Experience peaceful stays in Panchgani surrounded by nature’s beauty, just minutes from scenic lookout points, local trails, and nature walks. Mount View Heritage Hotel is your base for exploring Panchgani, whether you’re here for a weekend escape or a longer retreat.
         </p>
         <a href="rooms.html" class="cta-btn">Book Now</a>
       </div>
@@ -430,8 +440,7 @@
           <p class="label" id="slideLabel">ELEVATION</p>
 
           <p class="desc" id="slideDesc">
-            Wake up above the clouds, where the sun paints the sky in seven
-            hues.
+            Wander through whispering trails and mountain paths that call to the soul.
           </p>
 
           <!-- Slider Navigation -->
@@ -456,7 +465,7 @@
           <!-- add image 1 here -->
           <img class="slide" src="images/hom6.png" alt="" />
           <!-- add image 2 here -->
-          <img class="slide" src="images/hom7.png" alt="" />
+          <img class="slide" src="images/ev12.png" alt="" />
           <!-- add image 3 here -->
           <img class="slide" src="images/hom8.png" alt="" />
           <!-- add image 3 here -->
@@ -465,20 +474,19 @@
     </section>
 
     <section class="amenities-section">
-      <h2 class="amenities-title">Your Day, Our Venue</h2>
+      <h2 class="amenities-title">Weddings, Events & Celebrations in the Mountains</h2>
       <p class="amenities-subtitle">
-        Celebrate your special day at Mount View where every moment is
-        crafted to make your occasion truly unforgettable.
+        Host your wedding, party, milestone celebration, or corporate event in our open lawns or heritage spaces with the mountains as your backdrop. Mount View offers tailored event experiences that make your special day memorable and unique.
       </p>
 
-      <a href="rooms.html" class="cta-btn">Book Now</a>
+      <a href="rooms.html" class="cta-btn">Know More</a>
 
       <div class="amenities-grid">
         <!-- CARD 1 -->
         <div class="amenity-card">
           <img src="images/card3.png" alt="" />
           <div class="amenity-overlay">
-            <p>Serene Views</p>
+            <p>Delecious FOod</p>
           </div>
         </div>
 
@@ -486,7 +494,7 @@
         <div class="amenity-card">
           <img src="images/card1.png" alt="" />
           <div class="amenity-overlay">
-            <p>Open Dining</p>
+            <p>Ample Decoration</p>
           </div>
         </div>
 
@@ -507,45 +515,45 @@
         <div class="review-card rotate-1">
           <img src="images/5.jpeg" alt="" />
           <div class="review-info">
-            <p>“It’s unbelievably peaceful up here! No noise, no rush”</p>
+            <p>“A memorable getaway that i would love to repeat every year of not more often, thanks to the warmth of this wonderful family and the lap of nature that the town is!”</p>
             <div class="stars">★★★★★</div>
-            <span class="author">~ Arihant</span>
+            <span class="author">~ Roopika</span>
           </div>
         </div>
 
         <div class="review-card rotate-2">
           <img src="images/2.jpeg" alt="" />
           <div class="review-info">
-            <p>“Perfect place to disconnect and reconnect with nature.”</p>
+            <p>“A Hidden Gem in Panchgani – Hotel Mount View Heritage. It’s a perfect getaway for families, with plenty of space and fun outdoor activities like table tennis and carrom to keep everyone entertained. The hospitality was simply outstanding, warm, personal, and genuine.”</p>
             <div class="stars">★★★★★</div>
-            <span class="author">~ Neha</span>
+            <span class="author">~ Rohan Dahotre</span>
           </div>
         </div>
 
         <div class="review-card rotate-3">
           <img src="images/1.jpeg" alt="" />
           <div class="review-info">
-            <p>“Loved the calm vibe, food and hospitality.”</p>
+            <p>“We just randomly found this stay and it turned out to be super amazing. This hotel is a heritage property and surrounded by beautiful scenery which sets a calming atmosphere.”</p>
             <div class="stars">★★★★</div>
-            <span class="author">~ Rohan</span>
+            <span class="author">~ Gunja Arora</span>
           </div>
         </div>
 
         <div class="review-card rotate-4">
           <img src="images/4.jpeg" alt="" />
           <div class="review-info">
-            <p>“Views, silence and comfort – everything was perfect.”</p>
+            <p>“We often return here for its wonderful vibes, and every stay has been comfortable and memorable. Highly recommended for anyone looking for a peaceful getaway.”</p>
             <div class="stars">★★★★★</div>
-            <span class="author">~ Simran</span>
+            <span class="author">~ Gayatri Joshi</span>
           </div>
         </div>
 
         <div class="review-card rotate-5">
           <img src="images/3.jpeg" alt="" />
           <div class="review-info">
-            <p>“A hidden gem in Panchgani. Will visit again!”</p>
+            <p>“Beautiful Heritage Property. Smaller but beautiful rooms with big bathroom! Pet friendly Could hear atleast 10-12 different birds all day. Lake view Cleanest air and AQI What more do we need?”</p>
             <div class="stars">★★★★★</div>
-            <span class="author">~ Kunal</span>
+            <span class="author">~ Toshal Shenai</span>
           </div>
         </div>
       </div>
@@ -554,46 +562,6 @@
     <div id="footer-container"></div>
     <script src="js/include-footer.js"></script>
 
-    <script>
-      document.querySelectorAll("img[data-hover]").forEach(function (img) {
-        const original = img.src;
-        const hover = img.dataset.hover;
-
-        /* PRELOAD hover image */
-        const preload = new Image();
-        preload.src = hover;
-
-        img.style.transition =
-          "transform 0.45s ease, filter 0.35s ease, opacity 0.35s ease";
-        img.style.backgroundColor = "transparent";
-
-        img.addEventListener("mouseenter", function () {
-          img.style.filter = "blur(6px)";
-          img.style.transform = "scale(1.97)";
-          img.style.opacity = "0.85";
-
-          setTimeout(() => {
-            img.src = hover;
-            img.style.filter = "blur(0)";
-            img.style.transform = "scale(1)";
-            img.style.opacity = "1";
-          }, 180);
-        });
-
-        img.addEventListener("mouseleave", function () {
-          img.style.filter = "blur(6px)";
-          img.style.transform = "scale(0.97)";
-          img.style.opacity = "0.85";
-
-          setTimeout(() => {
-            img.src = original;
-            img.style.filter = "blur(0)";
-            img.style.transform = "scale(1)";
-            img.style.opacity = "1";
-          }, 180);
-        });
-      });
-    </script>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
