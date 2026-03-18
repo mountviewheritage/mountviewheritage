@@ -300,13 +300,13 @@ video::-webkit-media-controls-play-button {
 
 /* TEXT STYLING */
 .food-card h2 {
-    font-size: 35px;
+    font-size: 42px;
     font-weight: lighter;
     margin-bottom: 20px;
 }
 
 .food-card p {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.2;
     font-weight: lighter;
 }
@@ -400,6 +400,10 @@ video::-webkit-media-controls-play-button {
 
 @media (max-width: 769px) {
 
+    .mobile-br-hide {
+        display: none;
+    }
+
     .amenities-section {
         padding: 36px 18px;
         background: #ffffff;
@@ -408,7 +412,7 @@ video::-webkit-media-controls-play-button {
     /* HEADING */
     .amenities-title {
         font-family: Georgia, serif;
-        font-size: 35px;
+        font-size: 30px;
         font-weight: 500;
         color: #2e2e2e;
         margin-bottom: 20px;
@@ -418,7 +422,7 @@ video::-webkit-media-controls-play-button {
 
     /* SUBTITLE */
     .amenities-subtitle {
-        font-size: 20px;
+        font-size: 16px;
         width: 100%;
         line-height: 1.6;
         margin: 0%;
@@ -554,7 +558,7 @@ video::-webkit-media-controls-play-button {
     /* TITLE */
     .amenities-title {
         font-family: Georgia, serif;
-        font-size: 32px;
+        font-size: 42px;
         font-weight: 500;
         color: #2e2e2e;
         margin-bottom: 14px;
@@ -563,7 +567,7 @@ video::-webkit-media-controls-play-button {
 
     /* SUBTITLE */
     .amenities-subtitle {
-        font-size: 15px;
+        font-size: 20px;
         line-height: 1.6;
         color: #4a4a4a;
         max-width: 640px;
@@ -756,7 +760,7 @@ video::-webkit-media-controls-play-button {
         padding: 0;
     }
     .explore-text h2 {
-        font-size: 32px;
+        font-size: 30px;
         margin-bottom: 10px;
     }
     .explore-text p {
@@ -821,6 +825,7 @@ video::-webkit-media-controls-play-button {
     .collage-caption {
         display: none;
     }
+    
 }
 
 @media (max-width: 600px) {
@@ -844,7 +849,7 @@ video::-webkit-media-controls-play-button {
 
 /* LEFT SIDE */
 .spotlight-title {
-    font-size: 35px;
+    font-size: 42px;
     color: #4b3621;
     font-style: italic;
     margin-bottom: 25px;
@@ -905,7 +910,7 @@ video::-webkit-media-controls-play-button {
 
 /* RIGHT SIDE — TRENDING */
 .trending-title {
-    font-size: 35px;
+    font-size: 42px;
     font-weight: lighter;
     color: #4b3621;
     font-style: italic;
@@ -961,7 +966,7 @@ video::-webkit-media-controls-play-button {
     }
 
     .spotlight-heading {
-        font-size: 26px;
+        font-size: 20px;
     }
 
     .trend-img {
@@ -987,6 +992,10 @@ video::-webkit-media-controls-play-button {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+    .spotlight-title, .trending-title {
+        font-size: 30px !important;
+    }
+    
     .food-card {
         width: 80%;
         padding: 25px;
@@ -1010,11 +1019,11 @@ video::-webkit-media-controls-play-button {
     }
 
     .food-card h2 {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .food-card p {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
@@ -1037,7 +1046,7 @@ video::-webkit-media-controls-play-button {
 
 @media (max-width: 768px) {
     .oasis-text h2 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .oasis-img {
@@ -1047,7 +1056,7 @@ video::-webkit-media-controls-play-button {
 
 @media (max-width: 480px) {
     .oasis-text p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .oasis-img {
@@ -1128,8 +1137,8 @@ video::-webkit-media-controls-play-button {
 
 @media (min-width: 1561px) {
   /* Oasis Section */
-  .oasis-text h2 { font-size: 52px; }
-  .oasis-text p { font-size: 26px; }
+  .oasis-text h2 { font-size: 42px; }
+  .oasis-text p { font-size: 20px; }
   .oasis-img:nth-child(1) { height: 650px; }
   .oasis-img:nth-child(2) { height: 550px; }
   .oasis-img:nth-child(3) { height: 570px; }
@@ -1144,12 +1153,12 @@ video::-webkit-media-controls-play-button {
   }
 
   /* Food Section */
-  .food-card h2 { font-size: 52px; }
-  .food-card p { font-size: 26px; }
+  .food-card h2 { font-size: 42px; }
+  .food-card p { font-size: 20px; }
 
   /* Amenities Section */
   .amenities-title { font-size: 42px; margin-top: 50px; }
-  .amenities-subtitle { font-size: 18px; margin-bottom: 50px; }
+  .amenities-subtitle { font-size: 20px; margin-bottom: 50px; }
   .amenity-card { height: 650px; }
   .amenity-overlay p { font-size: 42px; }
 
@@ -1167,7 +1176,8 @@ video::-webkit-media-controls-play-button {
   .collage-caption { font-size: 28px; }
 
   /* Spotlight & Trending */
-  .spotlight-title, .trending-title, .spotlight-heading { font-size: 52px; }
+  .spotlight-title, .trending-title { font-size: 42px; }
+  .spotlight-heading { font-size: 42px; }
   .trend-img { width: 180px; height: 130px; }
   .trend-text { font-size: 24px; max-width: 450px; }
   .author-name { font-size: 22px; }

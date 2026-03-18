@@ -255,7 +255,7 @@
 
 @media (max-width: 768px) {
   .oasis-text h2 {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .oasis-img {
@@ -265,7 +265,7 @@
 
 @media (max-width: 480px) {
   .oasis-text p {
-    font-size: 14px;
+    font-size: 16px;
     text-align: left;
     padding: 10px;
   }
@@ -325,11 +325,11 @@
   }
 
   .heritage-text h2 {
-    font-size: 26px;
+    font-size: 30px;
   }
 
   .heritage-text p {
-    font-size: 14.5px;
+    font-size: 16px;
   }
 
   .heritage-image img {

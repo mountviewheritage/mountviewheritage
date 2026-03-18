@@ -15,6 +15,24 @@ body {
   padding: 0;
 }
 
+/* Global Font Settings */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 42px;
+}
+
+p {
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 30px !important;
+  }
+  p {
+    font-size: 16px !important;
+  }
+}
+
 /*preloader section*/
 
 #opener {
@@ -142,7 +160,7 @@ body.opener-active {
 
 .nav-title {
   font-family: inherit;
-  font-size: 38px;
+  font-size: 42px;
   font-weight: 400;
   letter-spacing: 3px;
   margin: 0;
@@ -314,7 +332,7 @@ img[data-hover] {
 
 .rooms-title {
   font-weight: lighter;
-  font-size: 32px;
+  font-size: 42px;
   margin-bottom: 60px;
   color: #ffffff;
 }
@@ -371,7 +389,7 @@ img[data-hover] {
 }
 
 .room-info h3 {
-  font-size: 18px;
+  font-size: 18px !important; /* Strictly restored to old size to prevent layout breakage */
   margin-bottom: 12px;
   font-weight: lighter;
 }
@@ -477,7 +495,7 @@ img[data-hover] {
 
 /* Description */
 .cta-container p {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.7;
   color: #4a4a4a;
   max-width: 720px;
@@ -771,7 +789,7 @@ img[data-hover] {
 /* TITLE */
 .info-box h3 {
   font-family: Georgia, serif;
-  font-size: 28px;
+  font-size: 28px !important; /* Strictly restored to old size */
   font-weight: 400;
   margin: 0;
   font-style: italic;
@@ -794,7 +812,7 @@ img[data-hover] {
 /* DESCRIPTION */
 .info-desc {
   margin: 14px 0 18px;
-  font-size: 15px;
+  font-size: 15px !important; /* Strictly restored to old size */
   line-height: 1.6;
   opacity: 0.95;
 }
@@ -1097,7 +1115,7 @@ img[data-hover] {
   }
 
   .info-header h3 {
-    font-size: 20px;
+    font-size: 20px !important;
   }
 
   .map-link {
@@ -1105,12 +1123,12 @@ img[data-hover] {
   }
 
   .info-desc {
-    font-size: 14px;
+    font-size: 14px !important;
     margin: 12px 0 14px;
   }
 
   .info-hint {
-    font-size: 11px;
+    font-size: 11px !important;
   }
 
   .pin-icon {
@@ -1230,7 +1248,7 @@ img[data-hover] {
   }
 
   .info-header h3 {
-    font-size: 18px;
+    font-size: 18px !important;
   }
 
   .map-link {
@@ -1238,13 +1256,13 @@ img[data-hover] {
   }
 
   .info-desc {
-    font-size: 13px;
+    font-size: 13px !important;
     line-height: 1.5;
     margin: 10px 0 12px;
   }
 
   .info-hint {
-    font-size: 10px;
+    font-size: 10px !important;
   }
 
   .pin-icon {
@@ -1602,6 +1620,7 @@ img[data-hover] {
 
   .room-info h3 {
     text-align: left;
+    font-size: 18px !important;
   }
 
   /* Feature list */
@@ -1707,7 +1726,7 @@ img[data-hover] {
 
 .event-slider-left h2 {
   font-family: "Georgia", serif;
-  font-size: 34px;
+  font-size: 42px;
   margin: 15px 0;
 }
 
@@ -2118,7 +2137,6 @@ img[data-hover] {
   }
 
   .reviews-cards {
-    height: 550px;
     /* Force height to contain tilted cards */
     display: flex;
     flex-direction: row;
@@ -2179,12 +2197,20 @@ img[data-hover] {
   }
 
   .review-info {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
     background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
     padding: 25px 20px;
     backdrop-filter: blur(10px);
-    height: 0;
+    height: 100%;
+    transition: all 0.4s ease;
+  }
+
+  .review-card.active .review-info {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   .review-info p {
@@ -2221,7 +2247,7 @@ img[data-hover] {
 
   /* SUBTITLE */
   .amenities-subtitle {
-    font-size: 14px;
+    font-size: 16px;
     width: 100%;
     line-height: 1.6;
     margin: 0%;
@@ -2357,7 +2383,7 @@ img[data-hover] {
   /* TITLE */
   .amenities-title {
     font-family: Georgia, serif;
-    font-size: 32px;
+    font-size: 42px;
     font-weight: 500;
     color: #2e2e2e;
     margin-bottom: 14px;
@@ -2365,7 +2391,7 @@ img[data-hover] {
 
   /* SUBTITLE */
   .amenities-subtitle {
-    font-size: 15px;
+    font-size: 20px;
     line-height: 1.6;
     color: #4a4a4a;
     max-width: 640px;
@@ -2536,7 +2562,7 @@ img[data-hover] {
 
   /* TITLE */
   #slideTitle {
-    font-size: 26px;
+    font-size: 30px;
     line-height: 1.25;
     margin-bottom: 10px;
   }
@@ -2626,6 +2652,11 @@ img[data-hover] {
 /* Responsive adjustments for the new section */
 @media (max-width: 768px) {
 
+
+  .weekend-cta {
+    text-align: left;
+    padding: 40px 20px;
+  }
 
   .weekend-cta h2 {
     font-size: 30px;

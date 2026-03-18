@@ -55,7 +55,7 @@
       <!-- Desktop illustration only -->
       <img src="images/sketch.png" alt="Mountview Illustration" class="hero-illustration" />
 
-      <h1>Welcome to your home away from home</h1>
+      <h1>Welcome to your home amidst nature</h1>
 
       <p>
         Nestled at 4,200 ft in the Sahyadri Mountains, Mount View Heritage Hotel offers a serene mountain view hotel experience with breathtaking sunsets, cool breezes, and timeless charm perfect for leisure stays, family holidays, and romantic getaways.
@@ -96,7 +96,7 @@
 
                   <div class="feature">
                     <img src="images/homi3.png" alt="" />
-                    <span>Private<br />Balcony</span>
+                    <span>Veranda</span>
                   </div>
                 </div>
               </div>
@@ -106,10 +106,10 @@
           <!-- COPY SAME CARD 3 MORE TIMES -->
           <a href="rooms.html?room=1" class="room-card reveal">
             <div class="room-img">
-              <img src="images/triple-deluxe2.png" data-hover="images/triple-deluxe.png" />
+              <img src="images/triple-deluxe2.png" />
 
               <div class="room-info">
-                <h3>Triple Deluxe Room</h3>
+                <h3>Deluxe Triple Room</h3>
                 <div class="room-features">
                   <div class="feature">
                     <img src="images/homi1.png" alt="" />
@@ -139,7 +139,7 @@
                 <div class="room-features">
                   <div class="feature">
                     <img src="images/homi1.png" alt="" />
-                    <span>Accommodates<br />2 People</span>
+                    <span>Accommodates<br />4 People</span>
                   </div>
 
                   <div class="feature">
@@ -165,7 +165,7 @@
                 <div class="room-features">
                   <div class="feature">
                     <img src="images/homi1.png" alt="" />
-                    <span>6 people</span>
+                    <span>Accommodates<br />5 People</span>
                   </div>
 
                   <div class="feature">
@@ -189,14 +189,14 @@
             <div class="swiper-slide">
               <a href="rooms.html?room=0" class="room-card">
                 <div class="room-img">
-                  <img src="images/hom1.png" />
+                  <img src="images/double-deluxe.png" />
                 </div>
                 <div class="room-info">
                   <h3>Double Deluxe Room</h3>
                   <ul>
                     <li>2 people</li>
                     <li>1 Large Double Bed</li>
-                    <li>Private Balcony</li>
+                    <li>Veranda</li>
                   </ul>
                 </div>
               </a>
@@ -206,7 +206,7 @@
             <div class="swiper-slide">
               <a href="rooms.html?room=1" class="room-card">
                 <div class="room-img">
-                  <img src="images/hom2.png" />
+                  <img src="images/triple-deluxe2.png" />
                 </div>
                 <div class="room-info">
                   <h3>Triple Deluxe Room</h3>
@@ -227,7 +227,7 @@
                 <div class="room-info">
                   <h3>Deluxe Quadruple Room</h3>
                   <ul>
-                    <li>Accommodates 2 people</li>
+                    <li>Accommodates 4 people</li>
                     <li>1 Double + 2 Single Bed</li>
                     <li>Private Balcony</li>
                   </ul>
@@ -243,7 +243,7 @@
                 <div class="room-info">
                   <h3>Deluxe Family Room</h3>
                   <ul>
-                    <li>6 people</li>
+                    <li>Accommodates 5 people</li>
                     <li>2 Double + 2 Single Bed</li>
                     <li>Expansive Garden View</li>
                   </ul>
@@ -486,7 +486,7 @@
         <div class="amenity-card">
           <img src="images/card3.png" alt="" />
           <div class="amenity-overlay">
-            <p>Delecious FOod</p>
+            <p>Delecious Food</p>
           </div>
         </div>
 
@@ -607,6 +607,13 @@
 
     <script src="js/home-pin.js"></script>
     <script src="js/slider.js"></script>
+    <script>
+      document.querySelectorAll('.review-card').forEach(card => {
+        card.addEventListener('click', function() {
+          this.classList.toggle('active');
+        });
+      });
+    </script>
 </body>
 
 </html>

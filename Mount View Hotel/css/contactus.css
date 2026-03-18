@@ -46,7 +46,7 @@
 .email-text {
     display: block;
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 20px;
     color: #333;
     text-decoration: none;
 }
@@ -132,6 +132,20 @@
         padding: 40px 25px;
     }
 
+    .contact-left h1 {
+        font-size: 30px;
+    }
+
+    .contact-left .desc {
+        font-size: 16px;
+    }
+    .email-text {
+      display: block;
+      margin-top: 10px;
+      font-size: 16px;
+      color: #333;
+      text-decoration: none;
+    }
     .two-col {
         flex-direction: column;
         gap: 0;
