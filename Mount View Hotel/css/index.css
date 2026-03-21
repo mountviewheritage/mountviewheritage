@@ -2041,21 +2041,23 @@ img[data-hover] {
   letter-spacing: 2px;
 }
 
-/* PREMIUM HOVER STATES */
-.review-card:hover {
-  transform: translateY(-25px) scale(1.05) rotate(0deg) !important;
-  z-index: 50 !important;
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
-}
+/* PREMIUM HOVER STATES — desktop only */
+@media (hover: hover) and (pointer: fine) {
+  .review-card:hover {
+    transform: translateY(-25px) scale(1.05) rotate(0deg) !important;
+    z-index: 50 !important;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+  }
 
-.review-card:hover img {
-  transform: scale(1.1);
-}
+  .review-card:hover img {
+    transform: scale(1.1);
+  }
 
-.review-card:hover .review-info {
-  opacity: 1;
-  transform: translateY(0);
-  backdrop-filter: blur(8px);
+  .review-card:hover .review-info {
+    opacity: 1;
+    transform: translateY(0);
+    backdrop-filter: blur(8px);
+  }
 }
 
 /* ================= ROTATIONS ================= */
@@ -2163,14 +2165,15 @@ img[data-hover] {
     flex-shrink: 0;
     scroll-snap-align: center;
     border-radius: 15px;
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     margin: 0 -10px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    will-change: transform;
     
     /* Fix rounding clipping issues */
     isolation: isolate;
     backface-visibility: hidden;
-    transform: translateZ(0);
     -webkit-mask-image: -webkit-radial-gradient(white, black);
     mask-image: radial-gradient(white, black);
   }
@@ -2196,21 +2199,30 @@ img[data-hover] {
     transform: rotate(6deg) translateY(20px);
   }
 
+  /* Active state — straighten the card on tap */
+  .review-card.active {
+    transform: translateY(-15px) scale(1.03) rotate(0deg) !important;
+    z-index: 50 !important;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  }
+
   .review-info {
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
     background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
     padding: 25px 20px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: none;
     height: 100%;
-    transition: all 0.4s ease;
+    transition: opacity 0.35s ease, visibility 0.35s ease, transform 0.35s ease;
+    will-change: opacity, transform;
   }
 
   .review-card.active .review-info {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    backdrop-filter: blur(6px);
   }
 
   .review-info p {

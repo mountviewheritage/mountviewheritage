@@ -62,7 +62,7 @@
       </p>
 
       <img src="images/mob-home-1.png" alt="Mountview Illustration" class="hero-illustration_2" />
-      <a href="rooms.html" class="hero-btn">Check Availability</a>
+      <a href="https://www.secure-booking-engine.com/accounts/C9lCVCV_MJMhuxNU9IHxhA/properties/CPD6_y1zvqAFM18PGj4Vgw/booking-engine/web/source/4wsctBw6Oq6j-g9XuxeRzQ/cart/TwugvEIjzg--BoHLXyC6dA/#!/rooms" class="hero-btn">Check Availability</a>
     </div>
   </section>
 
@@ -82,7 +82,7 @@
               <img src="images/double-deluxe.png" data-hover="images/double-deluxe.png" />
 
               <div class="room-info">
-                <h3>Double Deluxe Room</h3>
+                <h3>Deluxe Double Room</h3>
                 <div class="room-features">
                   <div class="feature">
                     <img src="images/homi1.png" alt="" />
@@ -161,7 +161,7 @@
               <img src="images/hom4.png" data-hover="images/hom4.png" />
 
               <div class="room-info">
-                <h3>Deluxe Family Room</h3>
+                <h3>Family Room</h3>
                 <div class="room-features">
                   <div class="feature">
                     <img src="images/homi1.png" alt="" />
@@ -192,7 +192,7 @@
                   <img src="images/double-deluxe.png" />
                 </div>
                 <div class="room-info">
-                  <h3>Double Deluxe Room</h3>
+                  <h3>Deluxe Double Room</h3>
                   <ul>
                     <li>2 people</li>
                     <li>1 Large Double Bed</li>
@@ -209,7 +209,7 @@
                   <img src="images/triple-deluxe2.png" />
                 </div>
                 <div class="room-info">
-                  <h3>Triple Deluxe Room</h3>
+                  <h3>Deluxe Triple Room</h3>
                   <ul>
                     <li>3 people</li>
                     <li>1 Double + 1 Single Bed</li>
@@ -241,7 +241,7 @@
                   <img src="images/hom4.png" />
                 </div>
                 <div class="room-info">
-                  <h3>Deluxe Family Room</h3>
+                  <h3>Family Room</h3>
                   <ul>
                     <li>Accommodates 5 people</li>
                     <li>2 Double + 2 Single Bed</li>
@@ -608,11 +608,30 @@
     <script src="js/home-pin.js"></script>
     <script src="js/slider.js"></script>
     <script>
-      document.querySelectorAll('.review-card').forEach(card => {
-        card.addEventListener('click', function() {
-          this.classList.toggle('active');
+      (function() {
+        const reviewCards = document.querySelectorAll('.review-card');
+        
+        reviewCards.forEach(card => {
+          card.addEventListener('click', function(e) {
+            const isActive = this.classList.contains('active');
+            
+            // Close all other cards first
+            reviewCards.forEach(c => c.classList.remove('active'));
+            
+            // Toggle the clicked card
+            if (!isActive) {
+              this.classList.add('active');
+            }
+          });
         });
-      });
+
+        // Close active card when tapping outside the reviews section
+        document.addEventListener('click', function(e) {
+          if (!e.target.closest('.reviews-cards')) {
+            reviewCards.forEach(c => c.classList.remove('active'));
+          }
+        });
+      })();
     </script>
 </body>
 
