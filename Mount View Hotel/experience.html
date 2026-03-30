@@ -37,8 +37,9 @@
     const muteBtn = document.getElementById("muteBtn");
     const muteIcon = muteBtn.querySelector("i");
 
-    // Unified function to handle mute/unmute
-    function toggleMute() {
+    // Only toggle muted state — never affect play/pause
+    function toggleMute(e) {
+      if (e) e.stopPropagation(); // prevent global listeners from firing
       video.muted = !video.muted;
       updateMuteIcon();
     }
@@ -56,17 +57,13 @@
     // Initial check (in case browser allows unmuted autoplay)
     updateMuteIcon();
 
-    // Helper to unmute and restart video (Auto-enable sound on first interaction)
-    function enableSoundOnFirstInteraction() {
+    // Auto-enable sound on first interaction (but NOT from mute button)
+    function enableSoundOnFirstInteraction(e) {
+      // Skip if the click is on the mute button (it has its own handler)
+      if (muteBtn.contains(e.target)) return;
+
       video.muted = false;
       updateMuteIcon();
-      
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          console.log("Play failed:", error);
-        });
-      }
 
       document.removeEventListener("click", enableSoundOnFirstInteraction);
       document.removeEventListener("touchstart", enableSoundOnFirstInteraction);
