@@ -197,6 +197,13 @@
     /* hidden for desktop */
 }
 
+.blog-list-section li{
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
 /* TABLET */
 @media (max-width: 992px) {
     .related-card {
