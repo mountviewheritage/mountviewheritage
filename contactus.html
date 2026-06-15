@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Panchgani Hotels Contant Numbers & Address - Mount View Heritage Hotel</title>
-   <meta name="description"
+  <meta name="description"
     content="Looking for Panchgani hotels contact numbers & address? Get in touch with Mount View Heritage Hotel for bookings, inquiries, and a seamless stay experience." />
   <link rel="canonical" href="https://www.mountviewheritagehotel.com/contactus.html" />
   <link rel="icon" type="image/png" href="images/final-logo.png" />
@@ -54,7 +54,7 @@
     </div>
 
     <div class="contact-right">
-      <form>
+      <form id="contact-form">
         <label>Name</label>
         <input type="text" placeholder="" />
 
@@ -96,6 +96,9 @@
         <textarea rows="6"></textarea>
 
         <button type="submit" class="submit-btn">Submit</button>
+        <div id="thank-you-message" style="display:none;color:green;margin-bottom:15px;margin-top: 10px;">
+          Thank you for contacting us. We will get back to you shortly.
+        </div>
       </form>
     </div>
   </section>
@@ -107,7 +110,7 @@
   <script src="js/include-bottom-bar.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/menu.js"></script>
-  
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const customSelect = document.querySelector(".custom-select");
@@ -127,7 +130,7 @@
           option.addEventListener("click", function () {
             // Update hidden select value
             hiddenSelect.value = this.getAttribute("data-value");
-            
+
             // Update trigger text
             selectedText.textContent = this.textContent;
 
@@ -147,6 +150,20 @@
           }
         });
       }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const form = document.getElementById("contact-form");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        document.getElementById("thank-you-message").style.display = "block";
+
+        this.reset();
+      });
+
     });
   </script>
 </body>
