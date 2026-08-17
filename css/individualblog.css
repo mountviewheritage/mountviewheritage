@@ -125,6 +125,7 @@
     overflow: hidden;
     scroll-behavior: smooth;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .related-card {
