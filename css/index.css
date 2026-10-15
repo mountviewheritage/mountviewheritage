@@ -2773,3 +2773,47 @@ img[data-hover] {
     font-size: 15px;
   }
 }
+
+/* ===== ROOMS NOTE ===== */
+.rooms-title:has(+ .rooms-note) {
+  margin-bottom: 16px;
+}
+
+.rooms-note {
+  max-width: 760px;
+  margin: 0 0 48px;
+  font-family: "Georgia", serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #5f514a;
+}
+
+@media (max-width: 768px) {
+  .rooms-title:has(+ .rooms-note) {
+    margin-bottom: 12px;
+  }
+
+  .rooms-note {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+}
+
+/* ===== STAY HIGHLIGHTS ===== */
+.stay-highlights {
+  padding-bottom: 0;
+}
+
+.stay-highlight + .stay-highlight {
+  margin-top: 80px;
+}
+
+@media (max-width: 769px) {
+  .stay-highlights {
+    padding-bottom: 0;
+  }
+
+  .stay-highlight + .stay-highlight {
+    margin-top: 48px;
+  }
+}
