@@ -1938,7 +1938,7 @@ img[data-hover] {
 
 .reviews-section {
   background: #ffffff;
-  padding: 150px 0;
+  padding: 150px 0 60px;
   text-align: center;
   overflow: hidden;
   perspective: 2000px;
@@ -2672,5 +2672,104 @@ img[data-hover] {
 
   .weekend-cta h2 {
     font-size: 30px;
+  }
+}
+/* ===== HOME FAQ ===== */
+.home-faq {
+  background: #ffffff;
+  padding: 0 clamp(16px, 6vw, 125px) 60px;
+}
+
+.home-faq-title {
+  font-family: "Georgia", serif;
+  font-size: 42px;
+  font-weight: lighter;
+  font-style: italic;
+  letter-spacing: 2px;
+  color: #2d2d2d;
+  text-align: center;
+  margin: 0 0 32px;
+}
+
+.home-faq-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+  font-family: "Georgia", serif;
+}
+
+.home-faq-list details {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(138, 79, 61, 0.14);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 14px 28px rgba(79, 50, 38, 0.06);
+}
+
+.home-faq-list summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 18px;
+  line-height: 1.45;
+  color: #3b2b25;
+}
+
+.home-faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.home-faq-list summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #f4dfd7;
+  color: #8a4f3d;
+  font-size: 22px;
+}
+
+.home-faq-list details[open] summary {
+  border-bottom: 1px solid rgba(138, 79, 61, 0.12);
+}
+
+.home-faq-list details[open] summary::after {
+  content: "−";
+  background: #e8c5b7;
+}
+
+.home-faq-answer {
+  padding: 18px 22px 22px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #5f514a;
+}
+
+@media (max-width: 640px) {
+  .home-faq {
+    padding: 0 16px 40px;
+  }
+
+  .home-faq-title {
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
+
+  .home-faq-list summary {
+    padding: 18px;
+    font-size: 16px;
+  }
+
+  .home-faq-answer {
+    padding: 16px 18px 18px;
+    font-size: 15px;
   }
 }
