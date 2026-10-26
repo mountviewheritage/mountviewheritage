@@ -1,51 +1,105 @@
-<?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
-    <loc>https://www.mountviewheritagehotel.com/</loc>
-    <lastmod>2026-05-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+       <loc>https://www.mountviewheritagehotel.com/</loc>
+       <lastmod>2026-10-26T10:22:02+00:00</lastmod>
+       <priority>1.0000</priority>
   </url>
   <url>
-    <loc>https://www.mountviewheritagehotel.com/rooms.html</loc>
-    <lastmod>2026-05-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+       <loc>https://www.mountviewheritagehotel.com/rooms.html</loc>
+       <lastmod>2026-10-26T10:22:02+00:00</lastmod>
+       <priority>0.8000</priority>
   </url>
   <url>
-    <loc>https://www.mountviewheritagehotel.com/events.html</loc>
-    <lastmod>2026-05-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+       <loc>https://www.mountviewheritagehotel.com/index.html</loc>
+       <lastmod>2026-10-26T10:22:02+00:00</lastmod>
+       <priority>0.5120</priority>
   </url>
   <url>
-    <loc>https://www.mountviewheritagehotel.com/experience.html</loc>
-    <lastmod>2026-05-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+       <loc>https://www.mountviewheritagehotel.com/events.html</loc>
+       <lastmod>2026-10-26T10:22:02+00:00</lastmod>
+       <priority>0.5120</priority>
   </url>
   <url>
-    <loc>https://www.mountviewheritagehotel.com/aboutus.html</loc>
-    <lastmod>2026-05-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+       <loc>https://www.mountviewheritagehotel.com/experience.html</loc>
+       <lastmod>2026-10-26T10:22:02+00:00</lastmod>
+       <priority>0.5120</priority>
   </url>
   <url>
-    <loc>https://www.mountviewheritagehotel.com/contactus.html</loc>
-    <lastmod>2026-05-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+       <loc>https://www.mountviewheritagehotel.com/blogs.html</loc>
+       <lastmod>2026-10-26T10:22:02+00:00</lastmod>
+       <priority>0.9000</priority>
   </url>
   <url>
-    <loc>https://www.mountviewheritagehotel.com/faq.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+       <loc>https://www.mountviewheritagehotel.com/aboutus.html</loc>
+       <lastmod>2026-10-26T10:22:02+00:00</lastmod>
+       <priority>0.5120</priority>
   </url>
   <url>
-    <loc>https://www.mountviewheritagehotel.com/blogs.html</loc>
-    <lastmod>2026-05-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+       <loc>https://www.mountviewheritagehotel.com/faq.html</loc>
+       <lastmod>2026-10-26T10:22:02+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://www.mountviewheritagehotel.com/contactus.html</loc>
+       <lastmod>2026-10-26T10:22:02+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://www.mountviewheritagehotel.com/blog-slow-travel.html</loc>
+       <lastmod>2026-10-26T10:22:02+00:00</lastmod>
+       <priority>0.9000</priority>
+  </url>
+  <url>
+       <loc>https://www.mountviewheritagehotel.com/why-heritage-stays-in-panchgani.html</loc>
+       <lastmod>2026-10-26T10:22:02+00:00</lastmod>
+       <priority>0.9000</priority>
+  </url>
+  <url>
+       <loc>https://www.mountviewheritagehotel.com/panchgani-architecture-memory-and-hill-station-living.html</loc>
+       <lastmod>2026-10-26T10:22:02+00:00</lastmod>
+       <priority>0.9000</priority>
+  </url>
+  <url>
+       <loc>https://www.mountviewheritagehotel.com/panchgani-for-couples-resort-stay.html</loc>
+       <lastmod>2026-10-26T10:22:02+00:00</lastmod>
+       <priority>0.9000</priority>
+  </url>
+  <url>
+       <loc>https://www.mountviewheritagehotel.com/family-holidays-in-panchgani.html</loc>
+       <lastmod>2026-10-26T10:22:02+00:00</lastmod>
+       <priority>0.9000</priority>
+  </url>
+  <url>
+       <loc>https://www.mountviewheritagehotel.com/pet-friendly-resorts-in-panchgani.html</loc>
+       <lastmod>2026-10-26T10:22:02+00:00</lastmod>
+       <priority>0.9000</priority>
+  </url>
+  <url>
+       <loc>https://www.mountviewheritagehotel.com/valley-view-resort-panchgani-mountview-heritage-hotel.html</loc>
+       <lastmod>2026-10-26T10:22:02+00:00</lastmod>
+       <priority>0.9000</priority>
+  </url>
+  <url>
+       <loc>https://www.mountviewheritagehotel.com/panchgani-tourist-attractions.html</loc>
+       <lastmod>2026-10-26T10:22:02+00:00</lastmod>
+       <priority>0.9000</priority>
+  </url>
+  <url>
+       <loc>https://www.mountviewheritagehotel.com/best-resorts-in-panchgani-for-family-stays.html</loc>
+       <lastmod>2026-10-26T10:22:02+00:00</lastmod>
+       <priority>0.9000</priority>
+  </url>
+  <url>
+       <loc>https://www.mountviewheritagehotel.com/things-to-do-in-panchgani-during-your-stay.html</loc>
+       <lastmod>2026-10-26T10:22:02+00:00</lastmod>
+       <priority>0.9000</priority>
+  </url>
+  <url>
+       <loc>https://www.mountviewheritagehotel.com/destination-wedding-near-pune.html</loc>
+       <lastmod>2026-10-26T10:22:02+00:00</lastmod>
+       <priority>0.9000</priority>
   </url>
 </urlset>
