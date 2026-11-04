@@ -646,44 +646,77 @@
       </div>
     </section>
 
-    <section class="amenities-section stay-highlights">
-      <div class="stay-highlights-list">
-        <div class="stay-highlight">
-          <h2 class="amenities-title">A Heritage Property, Not a Renovated One</h2>
-          <p class="amenities-subtitle">
+    <section class="stay-highlights">
+      <div class="swiper stay-swiper">
+        <div class="swiper-wrapper">
+      <div class="swiper-slide stay-card stay-card--terracotta">
+        <div class="stay-card-text">
+          <p class="stay-card-label"><span class="stay-card-num">01</span> HERITAGE</p>
+          <h2 class="stay-card-title">A Heritage Property, Not a Renovated One</h2>
+          <p class="stay-card-desc">
             Guests regularly describe Mount View as a hidden gem precisely because it doesn't try to look new. The
             older-style architecture, the settled-in gardens, the sense of a building that belongs to its landscape, it
             all adds up to a stay that feels different from a standard hill-station hotel. It's heritage in the honest
             sense: lived-in and cared for, not restored into something generic.
           </p>
         </div>
+        <div class="stay-card-media">
+          <img src="images/heritage_resorts_family_getaway.jpg" alt="Heritage architecture and gardens at Mount View, Panchgani" loading="lazy" />
+        </div>
+      </div>
 
-        <div class="stay-highlight">
-          <h2 class="amenities-title">Built for Family Trips</h2>
-          <p class="amenities-subtitle">
+      <div class="swiper-slide stay-card stay-card--teal">
+        <div class="stay-card-text">
+          <p class="stay-card-label"><span class="stay-card-num">02</span> FAMILIES</p>
+          <h2 class="stay-card-title">Built for Family Trips</h2>
+          <p class="stay-card-desc">
             The Family Room comfortably sleeps five across two double beds and one single bed, offering plenty of space
             for everyone and their luggage. With table tennis, carrom and open spaces for children to play, it’s an
             ideal choice among Panchgani resorts for family stays.
           </p>
         </div>
+        <div class="stay-card-media">
+          <img src="images/family-holidays-in-panchgani.jpg" alt="Family holiday at Mount View resort in Panchgani" loading="lazy" />
+        </div>
+      </div>
 
-        <div class="stay-highlight">
-          <h2 class="amenities-title">A Quiet Retreat for Couples</h2>
-          <p class="amenities-subtitle">
+      <div class="swiper-slide stay-card stay-card--olive">
+        <div class="stay-card-text">
+          <p class="stay-card-label"><span class="stay-card-num">03</span> COUPLES</p>
+          <h2 class="stay-card-title">A Quiet Retreat for Couples</h2>
+          <p class="stay-card-desc">
             For couples, it's the little things that make the difference. A veranda with a mountain breeze, an evening
             walk with few traffic noises, a sunset at Sydney Point followed by a dinner back at the property. Nothing
             here is done to cater to romance, it just happens to be a place where romance can be found.
           </p>
         </div>
+        <div class="stay-card-media">
+          <img src="images/panchgani-for-couples-resort-stay.jpg" alt="Couples retreat at Mount View, Panchgani" loading="lazy" />
+        </div>
+      </div>
 
-        <div class="stay-highlight">
-          <h2 class="amenities-title">Pet Friendly Retreat</h2>
-          <p class="amenities-subtitle">
+      <div class="swiper-slide stay-card stay-card--brown">
+        <div class="stay-card-text">
+          <p class="stay-card-label"><span class="stay-card-num">04</span> PETS</p>
+          <h2 class="stay-card-title">Pet Friendly Retreat</h2>
+          <p class="stay-card-desc">
             If you are traveling with a dog, it narrows the search. Mount View is among the few pet-friendly resorts in
             Panchgani, according to reviews left by guests who actually traveled there with their pets and were not
             inconvenienced in doing so. Current pet policies are best confirmed at the time of booking, but Mount View
             has had a proven record of being pet friendly, not just allowing pets.
           </p>
+        </div>
+        <div class="stay-card-media">
+          <img src="images/pet-friendly-resorts-in-panchgani.jpg" alt="Pet-friendly stay at Mount View resort in Panchgani" loading="lazy" />
+        </div>
+      </div>
+        </div>
+
+        <div class="stay-swiper-controls">
+          <button type="button" class="stay-swiper-prev" aria-label="Previous slide">&#8592;</button>
+          <div class="stay-swiper-pagination"></div>
+          <button type="button" class="stay-swiper-next" aria-label="Next slide">&#8594;</button>
+          <span class="stay-swiper-count"><b>01</b> / 04</span>
         </div>
       </div>
     </section>
@@ -886,6 +919,29 @@
 
     <script src="js/home-pin.js"></script>
     <script src="js/slider.js"></script>
+    <script>
+      (function () {
+        var el = document.querySelector(".stay-swiper");
+        if (!el || typeof Swiper === "undefined") return;
+        var count = el.querySelector(".stay-swiper-count b");
+        new Swiper(el, {
+          effect: "fade",
+          fadeEffect: { crossFade: true },
+          speed: 800,
+          rewind: true,
+          grabCursor: true,
+          keyboard: { enabled: true, onlyInViewport: true },
+          autoplay: { delay: 6000, disableOnInteraction: false, pauseOnMouseEnter: true },
+          navigation: { nextEl: ".stay-swiper-next", prevEl: ".stay-swiper-prev" },
+          pagination: { el: ".stay-swiper-pagination", clickable: true },
+          on: {
+            slideChange: function (s) {
+              if (count) count.textContent = String(s.realIndex + 1).padStart(2, "0");
+            },
+          },
+        });
+      })();
+    </script>
     <script>
       (function () {
         const reviewCards = document.querySelectorAll('.review-card');
