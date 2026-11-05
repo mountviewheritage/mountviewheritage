@@ -2254,7 +2254,7 @@ img[data-hover] {
     font-weight: 500;
     color: #2e2e2e;
     margin-bottom: 20px;
-    text-align: left;
+    text-align: center;
   }
 
   /* SUBTITLE */
@@ -2265,7 +2265,7 @@ img[data-hover] {
     margin: 0%;
     color: #4a4a4a;
     margin-bottom: 24px;
-    text-align: left;
+    text-align: center;
   }
 
   .cta-btn {
@@ -2672,6 +2672,10 @@ img[data-hover] {
 
   .weekend-cta h2 {
     font-size: 30px;
+    text-align: center;
+  }
+  .weekend-cta p{
+    text-align: center;
   }
 }
 /* ===== HOME FAQ ===== */
