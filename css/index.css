@@ -1544,7 +1544,7 @@ img[data-hover] {
   .rooms-title {
     color: #ffffff !important;
     font-weight: normal;
-    text-align: left;
+    text-align: center;
     font-size: 30px;
     margin-bottom: 25px;
   }
@@ -2797,6 +2797,9 @@ img[data-hover] {
     font-size: 15px;
     margin-bottom: 25px;
     color: white !important;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
